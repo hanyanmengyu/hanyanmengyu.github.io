@@ -6,22 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>利用foreach循环对其进行求和并输出结果 | 寒烟</title>
+  <title>指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果 | 寒烟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="标题  使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。 题目要求：编写一个程序，使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。 代码如下">
+  <meta name="description" content="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用foreach循环对其进行求和并输出结果">
-<meta property="og:url" content="http://example.com/2018/11/02/%E5%88%A9%E7%94%A8foreach%E5%BE%AA%E7%8E%AF%E5%AF%B9%E5%85%B6%E8%BF%9B%E8%A1%8C%E6%B1%82%E5%92%8C%E5%B9%B6%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C/index.html">
+<meta property="og:title" content="指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果">
+<meta property="og:url" content="http://example.com/2018/10/22/%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C/index.html">
 <meta property="og:site_name" content="寒烟">
-<meta property="og:description" content="标题  使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。 题目要求：编写一个程序，使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。 代码如下">
+<meta property="og:description" content="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181101172955650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2018-11-02T09:13:39.000Z">
-<meta property="article:modified_time" content="2021-03-17T03:08:22.345Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20181022220756235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181022220933412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181022221420205?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA!%5B%E5%9C%A8%E8%BF%99%E9%87%8C%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0%5D(https://img-blog.csdn.net/20181022221431179?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="article:published_time" content="2018-10-22T14:16:51.000Z">
+<meta property="article:modified_time" content="2021-03-18T07:59:44.557Z">
 <meta property="article:author" content="Hanyan">
-<meta property="article:tag" content="java">
+<meta property="article:tag" content="c">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181101172955650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20181022220756235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="寒烟" type="application/atom+xml">
   
@@ -166,33 +168,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-利用foreach循环对其进行求和并输出结果" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      利用foreach循环对其进行求和并输出结果
+      指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果
     </h1>
   
 
         
-        <a href="/2018/11/02/%E5%88%A9%E7%94%A8foreach%E5%BE%AA%E7%8E%AF%E5%AF%B9%E5%85%B6%E8%BF%9B%E8%A1%8C%E6%B1%82%E5%92%8C%E5%B9%B6%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C/" class="archive-article-date">
-  	<time datetime="2018-11-02T09:13:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-02</time>
+        <a href="/2018/10/22/%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C/" class="archive-article-date">
+  	<time datetime="2018-10-22T14:16:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="标题-使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。"><a href="#标题-使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。" class="headerlink" title="标题  使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。"></a>标题  使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。</h2><ul>
-<li>题目要求：编写一个程序，使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。</li>
-<li>代码如下</li>
-</ul>
-<span id="more"></span>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">public class abc &#123;</span><br><span class="line">	public static void main(String args[]) &#123;</span><br><span class="line">	   Integer[] a &#x3D; new Integer[5];</span><br><span class="line">	   Scanner sca &#x3D; new Scanner(System.in);</span><br><span class="line">	   for(int i&#x3D;0;i&lt;5;i++)&#123;</span><br><span class="line">	       a[i]&#x3D;sca.nextInt();</span><br><span class="line">	   &#125;</span><br><span class="line">	   int sum&#x3D;0;</span><br><span class="line">	   for(int c:a)&#123;</span><br><span class="line">		   System.out.println(&quot;你输入的数字为：&quot;+c);</span><br><span class="line">		   sum+&#x3D;c;</span><br><span class="line">	   &#125;</span><br><span class="line">	   System.out.println(sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>运行结果如下：<br><img src="https://img-blog.csdnimg.cn/20181101172955650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <h2 id="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果"><a href="#标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果" class="headerlink" title="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果"></a>标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果</h2><span id="more"></span>
+<p>1.值传递与地址传递<br>下面看着段代码：void swap(int a, int b){<br>    int t;<br>    t=a;<br>    a=b;<br>    b=t;<br>}<br>void swap1(int *p1,int *p2){<br>    int t;<br>    t=*p1;<br>    *p1=*p2;<br>    *p2=t;</p>
+<p>}<br>main(){<br>    int a=5,b=9,*pointer_1,<em>pointer_2;<br>    pointer_1=&a;<br>    pointer_2=&b;<br>    swap(a,b);<br>    printf(“a=%d,b=%d\n”,a,b);<br>    swap1(pointer_1,pointer_2);<br>    printf(“a=%d,b=%d”,a,b);<br>}<br> //值传递与地址传递<br> 我分别用了两个函数不同的传递方法<br> 结果如下图：<img src="https://img-blog.csdn.net/20181022220756235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>第一个为值传递，第二个为地址传递<br>##2全局变量的可以导致交换<br>代码如下：<br>#include &lt;stdio.h&gt;<br>int a=5,b=9;<br>void swap(int,int){<br>    int t;<br>    t=a;<br>    a=b;<br>    b=t;<br>}<br>int main(){<br>    printf(“first: a=%d,b=%d”,a,b);<br>    swap(a,b);<br>    printf(“\nsecond: a=%d,b=%d”,a,b);<br>}<br>结果如下：<br><img src="https://img-blog.csdn.net/20181022220933412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>由上述代码可知全局变量可以发生值的交换。<br>3.形参的传递<br>代码如下：<br>#include&lt;stdio.h&gt;<br>swap(int <em>p1,int</em>p2){<br>    int</em>p;<br>    p=p1;<br>    p1=p2;<br>    p2=p;<br>}<br>main(){<br>    int a=5,b=9,*pointer_p1,*pointer_p2;<br>    pointer_p1=&a;<br>    pointer_p2=&b;<br>    swap(pointer_p1,pointer_p2);<br>    printf(“a=%d,b=%d”,a,b);<br>}<br>//运行完程序后，p1指向a，p2指向b，函数运行只是交换了p1，p2的指向，既有运行完函数的三个赋值语句后，p1指向b<br>//p2指向a；并没有改变主函数a，b的值，程 序运行的结果a=5，b=9<br>结果如下：<br><img src="https://img-blog.csdn.net/20181022221420205?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA!%5B%E5%9C%A8%E8%BF%99%E9%87%8C%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0%5D(https://img-blog.csdn.net/20181022221431179?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>//运行完程序后，p1指向a，p2指向b，函数运行只是交换了p1，p2的指向，既有运行完函数的三个赋值语句后，p1指向b<br>//p2指向a；并没有改变主函数a，b的值，程 序运行的结果a=5，b=9 </p>
 
       
 
@@ -237,7 +235,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c</a>
         		</li>
       		
 		</ul>
@@ -293,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io018/11/02/%E5%88%A9%E7%94%A8foreach%E5%BE%AA%E7%8E%AF%E5%AF%B9%E5%85%B6%E8%BF%9B%E8%A1%8C%E6%B1%82%E5%92%8C%E5%B9%B6%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io018/10/22/%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,20 +305,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/27/C%E8%AF%AD%E8%A8%80%E6%8B%BC%E5%9B%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/23/C%E8%AF%AD%E8%A8%80random%E6%9C%89%E6%97%A0%E7%A7%8D%E5%AD%90%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          C语言开发的拼图游戏
+          随机取牌游戏
         
       </div>
     </a>
   
-  
-    <a href="/2018/11/02/%E5%AD%97%E6%AF%8D%E8%AE%A1%E6%95%B0%E6%B8%B8%E6%88%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字母计数游戏</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -345,7 +338,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BB%8E%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%AF%BB%E5%85%A5%E4%B8%80%E7%BB%84%E6%95%B4%E6%95%B0%EF%BC%8C%E5%88%A9%E7%94%A8foreach%E5%BE%AA%E7%8E%AF%E5%AF%B9%E5%85%B6%E8%BF%9B%E8%A1%8C%E6%B1%82%E5%92%8C%E5%B9%B6%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">标题  使用命令行参数的方式从控制台读入一组整数，利用foreach循环对其进行求和并输出结果。</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%EF%BC%9A%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.</span> <span class="toc-text">标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果</span></a></li></ol>
                     </div>
                 </span>
             </div>
