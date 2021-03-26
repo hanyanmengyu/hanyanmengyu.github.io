@@ -6,24 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果 | 寒烟</title>
+  <title>java基础教程4 | 寒烟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果">
+  <meta name="description" content="Java 流(Stream)、文件(File)和IO读取控制台输入">
 <meta property="og:type" content="article">
-<meta property="og:title" content="指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果">
-<meta property="og:url" content="http://example.com/2018/10/22/%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C/index.html">
+<meta property="og:title" content="java基础教程4">
+<meta property="og:url" content="http://example.com/2021/03/26/Java%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A64/index.html">
 <meta property="og:site_name" content="寒烟">
-<meta property="og:description" content="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果">
+<meta property="og:description" content="Java 流(Stream)、文件(File)和IO读取控制台输入">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022220756235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022220933412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022221420205?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA!%5B%E5%9C%A8%E8%BF%99%E9%87%8C%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0%5D(https://img-blog.csdn.net/20181022221431179?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="article:published_time" content="2018-10-22T14:16:51.000Z">
-<meta property="article:modified_time" content="2021-03-18T07:59:44.557Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210326163439485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210326163631142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210326163923389.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210326163944818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210326165045206.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021032617202543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-03-26T09:35:32.000Z">
+<meta property="article:modified_time" content="2021-03-26T09:36:04.238Z">
 <meta property="article:author" content="Hanyan">
-<meta property="article:tag" content="c">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20181022220756235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210326163439485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="寒烟" type="application/atom+xml">
   
@@ -168,29 +171,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java基础教学4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果
+      java基础教程4
     </h1>
   
 
         
-        <a href="/2018/10/22/%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C/" class="archive-article-date">
-  	<time datetime="2018-10-22T14:16:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-22</time>
+        <a href="/2021/03/26/Java%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A64/" class="archive-article-date">
+  	<time datetime="2021-03-26T09:35:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果"><a href="#标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果" class="headerlink" title="标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果"></a>标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果</h2><span id="more"></span>
-<p>1.值传递与地址传递<br>下面看着段代码：void swap(int a, int b){<br>    int t;<br>    t=a;<br>    a=b;<br>    b=t;<br>}<br>void swap1(int *p1,int *p2){<br>    int t;<br>    t=*p1;<br>    *p1=*p2;<br>    *p2=t;</p>
-<p>}<br>main(){<br>    int a=5,b=9,*pointer_1,<em>pointer_2;<br>    pointer_1=&a;<br>    pointer_2=&b;<br>    swap(a,b);<br>    printf(“a=%d,b=%d\n”,a,b);<br>    swap1(pointer_1,pointer_2);<br>    printf(“a=%d,b=%d”,a,b);<br>}<br> //值传递与地址传递<br> 我分别用了两个函数不同的传递方法<br> 结果如下图：<img src="https://img-blog.csdn.net/20181022220756235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>第一个为值传递，第二个为地址传递<br>##2全局变量的可以导致交换<br>代码如下：<br>#include &lt;stdio.h&gt;<br>int a=5,b=9;<br>void swap(int,int){<br>    int t;<br>    t=a;<br>    a=b;<br>    b=t;<br>}<br>int main(){<br>    printf(“first: a=%d,b=%d”,a,b);<br>    swap(a,b);<br>    printf(“\nsecond: a=%d,b=%d”,a,b);<br>}<br>结果如下：<br><img src="https://img-blog.csdn.net/20181022220933412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>由上述代码可知全局变量可以发生值的交换。<br>3.形参的传递<br>代码如下：<br>#include&lt;stdio.h&gt;<br>swap(int <em>p1,int</em>p2){<br>    int</em>p;<br>    p=p1;<br>    p1=p2;<br>    p2=p;<br>}<br>main(){<br>    int a=5,b=9,*pointer_p1,*pointer_p2;<br>    pointer_p1=&a;<br>    pointer_p2=&b;<br>    swap(pointer_p1,pointer_p2);<br>    printf(“a=%d,b=%d”,a,b);<br>}<br>//运行完程序后，p1指向a，p2指向b，函数运行只是交换了p1，p2的指向，既有运行完函数的三个赋值语句后，p1指向b<br>//p2指向a；并没有改变主函数a，b的值，程 序运行的结果a=5，b=9<br>结果如下：<br><img src="https://img-blog.csdn.net/20181022221420205?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA!%5B%E5%9C%A8%E8%BF%99%E9%87%8C%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0%5D(https://img-blog.csdn.net/20181022221431179?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>//运行完程序后，p1指向a，p2指向b，函数运行只是交换了p1，p2的指向，既有运行完函数的三个赋值语句后，p1指向b<br>//p2指向a；并没有改变主函数a，b的值，程 序运行的结果a=5，b=9 </p>
+        <h2 id="Java-流-Stream-、文件-File-和IO"><a href="#Java-流-Stream-、文件-File-和IO" class="headerlink" title="Java 流(Stream)、文件(File)和IO"></a>Java 流(Stream)、文件(File)和IO</h2><h2 id="读取控制台输入"><a href="#读取控制台输入" class="headerlink" title="读取控制台输入"></a>读取控制台输入</h2><span id="more"></span>
+<p>Java 的控制台输入由 System.in 完成。</p>
+<p>为了获得一个绑定到控制台的字符流，你可以把 System.in 包装在一个 BufferedReader 对象中来创建一个字符流。</p>
+<p>下面是创建 BufferedReader 的基本语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> </span><br><span class="line">                      InputStreamReader(System.in));</span><br></pre></td></tr></table></figure>
+<p>BufferedReader 对象创建后，我们便可以使用 read() 方法从控制台读取一个字符，或者用 readLine() 方法读取一个字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BRRead</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">char</span> c;</span><br><span class="line">        <span class="comment">// 使用 System.in 创建 BufferedReader</span></span><br><span class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">        System.out.println(<span class="string">&quot;输入字符, 按下 &#x27;q&#x27; 键退出。&quot;</span>);</span><br><span class="line">        <span class="comment">// 读取字符</span></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            c = (<span class="keyword">char</span>) br.read();</span><br><span class="line">            System.out.println(c);</span><br><span class="line">        &#125; <span class="keyword">while</span> (c != <span class="string">&#x27;q&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210326163439485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="从控制台读取字符串"><a href="#从控制台读取字符串" class="headerlink" title="从控制台读取字符串"></a>从控制台读取字符串</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BRReadLines</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 使用 System.in 创建 BufferedReader</span></span><br><span class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">        String str;</span><br><span class="line">        System.out.println(<span class="string">&quot;Enter lines of text.&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Enter &#x27;end&#x27; to quit.&quot;</span>);</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            str = br.readLine();</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125; <span class="keyword">while</span> (!str.equals(<span class="string">&quot;end&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210326163631142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="控制台输出"><a href="#控制台输出" class="headerlink" title="控制台输出"></a>控制台输出</h2><p>在此前已经介绍过，控制台的输出由 print( ) 和 println() 完成。这些方法都由类 PrintStream 定义，System.out 是该类对象的一个引用。</p>
+<p>PrintStream 继承了 OutputStream类，并且实现了方法 write()。这样，write() 也可以用来往控制台写操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//演示 System.out.write().</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WriteDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> b;</span><br><span class="line">        b = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">        System.out.write(b);</span><br><span class="line">        System.out.write(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210326163923389.png" alt="在这里插入图片描述"></p>
+<p>注意：write() 方法不经常使用，因为 print() 和 println() 方法用起来更为方便。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210326163944818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h2><p>该流用于从文件读取数据，它的对象可以用关键字 new 来创建。</p>
+<p>有多种构造方法可用来创建对象。</p>
+<p>可以使用字符串类型的文件名来创建一个输入流对象来读取文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream f = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;C:/java/hello&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>也可以使用一个文件对象来创建一个输入流对象来读取文件。我们首先得使用 File() 方法来创建一个文件对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File f = <span class="keyword">new</span> File(<span class="string">&quot;C:/java/hello&quot;</span>);</span><br><span class="line">InputStream out = <span class="keyword">new</span> FileInputStream(f);</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileOutputStream"><a href="#FileOutputStream" class="headerlink" title="FileOutputStream"></a>FileOutputStream</h2><p>该类用来创建一个文件并向文件中写数据。</p>
+<p>如果该流在打开文件进行输出前，目标文件不存在，那么该流会创建该文件。</p>
+<p>有两个构造方法可以用来创建 FileOutputStream 对象。</p>
+<p>使用字符串类型的文件名来创建一个输出流对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OutputStream f = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;C:/java/hello&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>也可以使用一个文件对象来创建一个输出流来写文件。我们首先得使用File()方法来创建一个文件对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File f = <span class="keyword">new</span> File(<span class="string">&quot;C:/java/hello&quot;</span>);</span><br><span class="line">OutputStream f = <span class="keyword">new</span> FileOutputStream(f);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">fileStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">byte</span> bWrite[] = &#123; <span class="number">11</span>, <span class="number">21</span>, <span class="number">3</span>, <span class="number">40</span>, <span class="number">5</span> &#125;;</span><br><span class="line">            OutputStream os = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;test.txt&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; bWrite.length; x++) &#123;</span><br><span class="line">                os.write(bWrite[x]); <span class="comment">// writes the bytes</span></span><br><span class="line">            &#125;</span><br><span class="line">            os.close();</span><br><span class="line"> </span><br><span class="line">            InputStream is = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;test.txt&quot;</span>);</span><br><span class="line">            <span class="keyword">int</span> size = is.available();</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                System.out.print((<span class="keyword">char</span>) is.read() + <span class="string">&quot;  &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            is.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            System.out.print(<span class="string">&quot;Exception&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Java中的目录"><a href="#Java中的目录" class="headerlink" title="Java中的目录"></a>Java中的目录</h2><p>mkdir( )方法创建一个文件夹，成功则返回true，失败则返回false。失败表明File对象指定的路径已经存在，或者由于整个路径还不存在，该文件夹不能被创建。<br>mkdirs()方法创建一个文件夹和它的所有父文件夹。</p>
+<p>一个目录其实就是一个 File 对象，它包含其他文件和文件夹。</p>
+<p>如果创建一个 File 对象并且它是一个目录，那么调用 isDirectory() 方法会返回 true。</p>
+<p>可以通过调用该对象上的 list() 方法，来提取它包含的文件和文件夹的列表。</p>
+<h2 id="Java-Scanner-类"><a href="#Java-Scanner-类" class="headerlink" title="Java Scanner 类"></a>Java Scanner 类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner s = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScannerDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="comment">// 从键盘接收数据</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment">// next方式接收字符串</span></span><br><span class="line">        System.out.println(<span class="string">&quot;next方式接收：&quot;</span>);</span><br><span class="line">        <span class="comment">// 判断是否还有输入</span></span><br><span class="line">        <span class="keyword">if</span> (scan.hasNext()) &#123;</span><br><span class="line">            String str1 = scan.next();</span><br><span class="line">            System.out.println(<span class="string">&quot;输入的数据为：&quot;</span> + str1);</span><br><span class="line">        &#125;</span><br><span class="line">        scan.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210326165045206.png" alt="在这里插入图片描述"></p>
+<h2 id="next-与-nextLine-区别"><a href="#next-与-nextLine-区别" class="headerlink" title="next() 与 nextLine() 区别"></a>next() 与 nextLine() 区别</h2><p>next():</p>
+<p>1、一定要读取到有效字符后才可以结束输入。<br>2、对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。<br>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符。<br>next() 不能得到带有空格的字符串。</p>
+<p>nextLine()：</p>
+<p>1、以Enter为结束符,也就是说 nextLine()方法返回的是输入回车之前的所有字符。<br>2、可以获得空白。</p>
+<h2 id="Java-异常处理"><a href="#Java-异常处理" class="headerlink" title="Java 异常处理"></a>Java 异常处理</h2><p><img src="https://img-blog.csdnimg.cn/2021032617202543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(ExceptionName e1)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">//Catch 块</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="throws-throw-关键字："><a href="#throws-throw-关键字：" class="headerlink" title="throws/throw 关键字："></a>throws/throw 关键字：</h2><p>如果一个方法没有捕获到一个检查性异常，那么该方法必须使用 throws 关键字来声明。throws 关键字放在方法签名的尾部。</p>
+<h2 id="finally关键字"><a href="#finally关键字" class="headerlink" title="finally关键字"></a>finally关键字</h2><p>finally 关键字用来创建在 try 代码块后面执行的代码块。</p>
+<p>无论是否发生异常，finally 代码块中的代码总会被执行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">1</span> 异常的变量名<span class="number">1</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">2</span> 异常的变量名<span class="number">2</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -235,7 +287,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -291,7 +343,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io018/10/22/%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io021/03/26/Java%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A64/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,15 +357,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/10/23/C%E8%AF%AD%E8%A8%80random%E6%9C%89%E6%97%A0%E7%A7%8D%E5%AD%90%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          标题rand与srand之间的分析
-        
-      </div>
-    </a>
   
+    <a href="/2021/03/26/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java基础教程3</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -338,7 +386,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%EF%BC%9A%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92%EF%BC%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%EF%BC%8C%E4%B8%8E%E5%BD%A2%E5%8F%82%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.</span> <span class="toc-text">标题：指针的值传递与地址传递，全局变量传递，与形参传递的区别与结果</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E6%B5%81-Stream-%E3%80%81%E6%96%87%E4%BB%B6-File-%E5%92%8CIO"><span class="toc-number">1.</span> <span class="toc-text">Java 流(Stream)、文件(File)和IO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%85%A5"><span class="toc-number">2.</span> <span class="toc-text">读取控制台输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">3.</span> <span class="toc-text">从控制台读取字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA"><span class="toc-number">4.</span> <span class="toc-text">控制台输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FileInputStream"><span class="toc-number">5.</span> <span class="toc-text">FileInputStream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FileOutputStream"><span class="toc-number">6.</span> <span class="toc-text">FileOutputStream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">Java中的目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Scanner-%E7%B1%BB"><span class="toc-number">8.</span> <span class="toc-text">Java Scanner 类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#next-%E4%B8%8E-nextLine-%E5%8C%BA%E5%88%AB"><span class="toc-number">9.</span> <span class="toc-text">next() 与 nextLine() 区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">10.</span> <span class="toc-text">Java 异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#throws-throw-%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9A"><span class="toc-number">11.</span> <span class="toc-text">throws&#x2F;throw 关键字：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#finally%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">12.</span> <span class="toc-text">finally关键字</span></a></li></ol>
                     </div>
                 </span>
             </div>
