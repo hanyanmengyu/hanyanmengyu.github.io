@@ -6,20 +6,58 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hanyanmengyu.github.io">
-  <title>python教程 (3) | 寒烟</title>
+  <title>sql你一定能看懂的教程3（傻瓜教程） | 寒烟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python 面向对象面向对象技术简介  类(Class): 用来描述具有相同的属性和方法的对象的集合。它定义了该集合中每个对象所共有的属性和方法。对象是类的实例。  类变量：类变量在整个实例化的对象中是公用的。类变量定义在类中且在函数体之外。类变量通常不作为实例变量使用。  数据成员：类变量或者实例变量, 用于处理类及其实例对象的相关的数据。  方法重写：如果从父类继承的方法不能满足子类的需求，">
+  <meta name="description" content="SQL 连接(JOIN)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python教程 (3)">
-<meta property="og:url" content="https://hanyanmengyu.github.io/2021/03/12/python%E6%95%99%E7%A8%8B%20(3)/index.html">
+<meta property="og:title" content="sql你一定能看懂的教程3（傻瓜教程）">
+<meta property="og:url" content="https://hanyanmengyu.github.io/2021/04/06/sql%E5%8F%B2%E4%B8%8A%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%99%E7%A8%8B3%EF%BC%88%E5%88%9D%E5%AD%A6%E8%80%85%E9%83%BD%E8%83%BD%E7%9C%8B%E5%BE%97%E6%87%82%EF%BC%89/index.html">
 <meta property="og:site_name" content="寒烟">
-<meta property="og:description" content="Python 面向对象面向对象技术简介  类(Class): 用来描述具有相同的属性和方法的对象的集合。它定义了该集合中每个对象所共有的属性和方法。对象是类的实例。  类变量：类变量在整个实例化的对象中是公用的。类变量定义在类中且在函数体之外。类变量通常不作为实例变量使用。  数据成员：类变量或者实例变量, 用于处理类及其实例对象的相关的数据。  方法重写：如果从父类继承的方法不能满足子类的需求，">
+<meta property="og:description" content="SQL 连接(JOIN)">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-12T10:23:22.000Z">
-<meta property="article:modified_time" content="2021-03-17T03:07:59.980Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406165337804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406165612702.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406165708287.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406165751559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406165944669.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406170155197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406170323218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406170434966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406170543964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406170746366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406170853211.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406171003833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406171157907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406171315767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406171454132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406171717958.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406171805437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406172215337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406172327724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406172452926.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406172959852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406173033605.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406173123389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021040617335148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406173402459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406173626621.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406174004457.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406174202720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021040617421830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406174405785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406174626422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406174735192.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021040617494017.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406174948948.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406175049802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406175127906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210406175212840.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-04-06T09:54:33.000Z">
+<meta property="article:modified_time" content="2021-04-06T10:51:27.785Z">
 <meta property="article:author" content="Hanyan">
-<meta property="article:tag" content="python学习   基础   重点">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210406165337804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="寒烟" type="application/atom+xml">
   
@@ -164,151 +202,83 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python教程 (3)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sql史上最简单的教程3（初学者都能看得懂）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      python教程 (3)
+      sql你一定能看懂的教程3（傻瓜教程）
     </h1>
   
 
         
-        <a href="/2021/03/12/python%E6%95%99%E7%A8%8B%20(3)/" class="archive-article-date">
-  	<time datetime="2021-03-12T10:23:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-12</time>
+        <a href="/2021/04/06/sql%E5%8F%B2%E4%B8%8A%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%99%E7%A8%8B3%EF%BC%88%E5%88%9D%E5%AD%A6%E8%80%85%E9%83%BD%E8%83%BD%E7%9C%8B%E5%BE%97%E6%87%82%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-04-06T09:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Python-面向对象"><a href="#Python-面向对象" class="headerlink" title="Python 面向对象"></a>Python 面向对象</h2><p><strong>面向对象技术简介</strong></p>
-<ul>
-<li><p>类(Class): 用来描述具有相同的属性和方法的对象的集合。它定义了该集合中每个对象所共有的属性和方法。对象是类的实例。</p>
-</li>
-<li><p>类变量：类变量在整个实例化的对象中是公用的。类变量定义在类中且在函数体之外。类变量通常不作为实例变量使用。</p>
-</li>
-<li><p>数据成员：类变量或者实例变量, 用于处理类及其实例对象的相关的数据。</p>
-</li>
-<li><p>方法重写：如果从父类继承的方法不能满足子类的需求，可以对其进行改写，这个过程叫方法的覆盖（override），也称为方法的重写。</p>
-</li>
-<li><p>局部变量：定义在方法中的变量，只作用于当前实例的类。</p>
-</li>
-<li><p>实例变量：在类的声明中，属性是用变量来表示的。这种变量就称为实例变量，是在类声明的内部但是在类的其他成员方法之外声明的。</p>
-<span id="more"></span></li>
-<li><p>继承：即一个派生类（derived class）继承基类（base<br>class）的字段和方法。继承也允许把一个派生类的对象作为一个基类对象对待。例如，有这样一个设计：一个Dog类型的对象派生自Animal类，这是模拟”是一个（is-a）”关系（例图，Dog是一个Animal）。</p>
-</li>
-<li><p>实例化：创建一个类的实例，类的具体对象。</p>
-</li>
-<li><p>方法：类中定义的函数。</p>
-</li>
-<li><p>对象：通过类定义的数据结构实例。对象包括两个数据成员（类变量和实例变量）和方法。</p>
-</li>
-</ul>
-<h2 id="Python-正则表达式（需要进一步学习）"><a href="#Python-正则表达式（需要进一步学习）" class="headerlink" title="Python 正则表达式（需要进一步学习）"></a>Python 正则表达式（需要进一步学习）</h2><p><strong>re.match函数</strong></p>
-<p>re.match 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none。</p>
-<p>函数语法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.match(pattern, string, flags=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>pattern    匹配的正则表达式
-string    要匹配的字符串。
-flags    标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">print(re.match(<span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>).span())  <span class="comment"># 在起始位置匹配</span></span><br><span class="line">print(re.match(<span class="string">&#x27;com&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>))         <span class="comment"># 不在起始位置匹配</span></span><br></pre></td></tr></table></figure>
-
-<p>以上实例运行输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="literal">None</span></span><br><span class="line">   </span><br></pre></td></tr></table></figure>
-<p><strong>re.search方法</strong></p>
-<p>re.search 扫描整个字符串并返回第一个成功的匹配。</p>
-<p>函数语法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.search(pattern, string, flags=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<p>函数参数说明：</p>
-<pre><code>参数    描述
-pattern    匹配的正则表达式
-string    要匹配的字符串。
-flags    标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等。
-</code></pre>
-<p>匹配成功re.search方法返回一个匹配的对象，否则返回None。<br>我们可以使用group(num) 或 groups() 匹配对象函数来获取匹配表达式。</p>
-<pre><code>   start() 返回匹配开始的位置
-   end() 返回匹配结束的位置
-   span() 返回一个元组包含匹配 (开始,结束) 的位置 
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">print(re.search(<span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>).span())  <span class="comment"># 在起始位置匹配</span></span><br><span class="line">print(re.search(<span class="string">&#x27;com&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>).span())         <span class="comment"># 不在起始位置匹配</span></span><br></pre></td></tr></table></figure>
-<p>以上实例运行输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line">(<span class="number">11</span>, <span class="number">14</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python-CGI编程（在学前端是可以深化学习）"><a href="#Python-CGI编程（在学前端是可以深化学习）" class="headerlink" title="Python CGI编程（在学前端是可以深化学习）"></a>Python CGI编程（在学前端是可以深化学习）</h2><p><strong>什么是 CGI<br>CGI 目前由 NCSA 维护，NCSA 定义 CGI 如下：<br>CGI(Common Gateway Interface)，通用网关接口，它是一段程序，运行在服务器上如：HTTP 服务器，提供同客户端 HTML 页面的接口。</strong></p>
-<h2 id="Python-操作-MySQL-数据库"><a href="#Python-操作-MySQL-数据库" class="headerlink" title="Python 操作 MySQL 数据库"></a>Python 操作 MySQL 数据库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = MySQLdb.connect(<span class="string">&quot;localhost&quot;</span>, <span class="string">&quot;testuser&quot;</span>, <span class="string">&quot;test123&quot;</span>, <span class="string">&quot;TESTDB&quot;</span>, charset=<span class="string">&#x27;utf8&#x27;</span> )</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用execute方法执行SQL语句</span></span><br><span class="line">cursor.execute(<span class="string">&quot;SELECT VERSION()&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 fetchone() 方法获取一条数据</span></span><br><span class="line">data = cursor.fetchone()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> <span class="string">&quot;Database version : %s &quot;</span> % data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
-<p>执行以上脚本输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database version : <span class="number">5.0</span><span class="number">.45</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="创建数据库表（具体在sql数据库上继续学习）"><a href="#创建数据库表（具体在sql数据库上继续学习）" class="headerlink" title="创建数据库表（具体在sql数据库上继续学习）"></a>创建数据库表（具体在sql数据库上继续学习）</h2><p>如果数据库连接存在我们可以使用execute()方法来为数据库创建表，如下所示创建表EMPLOYEE：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = MySQLdb.connect(<span class="string">&quot;localhost&quot;</span>, <span class="string">&quot;testuser&quot;</span>, <span class="string">&quot;test123&quot;</span>, <span class="string">&quot;TESTDB&quot;</span>, charset=<span class="string">&#x27;utf8&#x27;</span> )</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果数据表已经存在使用 execute() 方法删除表。</span></span><br><span class="line">cursor.execute(<span class="string">&quot;DROP TABLE IF EXISTS EMPLOYEE&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建数据表SQL语句</span></span><br><span class="line">sql = <span class="string">&quot;&quot;&quot;CREATE TABLE EMPLOYEE (</span></span><br><span class="line"><span class="string">         FIRST_NAME  CHAR(20) NOT NULL,</span></span><br><span class="line"><span class="string">         LAST_NAME  CHAR(20),</span></span><br><span class="line"><span class="string">         AGE INT,  </span></span><br><span class="line"><span class="string">         SEX CHAR(1),</span></span><br><span class="line"><span class="string">         INCOME FLOAT )&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python-网络编程"><a href="#Python-网络编程" class="headerlink" title="Python 网络编程"></a>Python 网络编程</h2><p>Python 提供了两个级别访问的网络服务：</p>
-<p>低级别的网络服务支持基本的 Socket，它提供了标准的 BSD Sockets API，可以访问底层操作系统 Socket 接口的全部方法。<br>高级别的网络服务模块 SocketServer， 它提供了服务器中心类，可以简化网络服务器的开发。</p>
-<p><strong>socket()函数</strong></p>
-<p>Python 中，我们用 socket（）函数来创建套接字，语法格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socket.socket([family[, <span class="built_in">type</span>[, proto]]])</span><br></pre></td></tr></table></figure>
-<p><strong>简单实例<br>服务端</strong></p>
-<p>我们使用 socket 模块的 socket 函数来创建一个 socket 对象。socket 对象可以通过调用其他函数来设置一个 socket 服务。</p>
-<p>现在我们可以通过调用 bind(hostname, port) 函数来指定服务的 port(端口)。</p>
-<p>接着，我们调用 socket 对象的 accept 方法。该方法等待客户端的连接，并返回 connection 对象，表示已连接到客户端。</p>
-<p>完整代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket               <span class="comment"># 导入 socket 模块</span></span><br><span class="line"> </span><br><span class="line">s = socket.socket()         <span class="comment"># 创建 socket 对象</span></span><br><span class="line">host = socket.gethostname() <span class="comment"># 获取本地主机名</span></span><br><span class="line">port = <span class="number">12345</span>                <span class="comment"># 设置端口</span></span><br><span class="line">s.bind((host, port))        <span class="comment"># 绑定端口</span></span><br><span class="line"> </span><br><span class="line">s.listen(<span class="number">5</span>)                 <span class="comment"># 等待客户端连接</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    c,addr = s.accept()     <span class="comment"># 建立客户端连接</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;连接地址：&#x27;</span>, addr</span><br><span class="line">    c.send(<span class="string">&#x27;欢迎访问菜鸟教程！&#x27;</span>)</span><br><span class="line">    c.close()                <span class="comment"># 关闭连接</span></span><br></pre></td></tr></table></figure>
-<p><strong>客户端</strong></p>
-<p>接下来我们写一个简单的客户端实例连接到以上创建的服务。端口号为 12345。</p>
-<p>socket.connect(hosname, port ) 方法打开一个 TCP 连接到主机为 hostname 端口为 port 的服务商。连接后我们就可以从服务端获取数据，记住，操作完成后需要关闭连接。</p>
-<p>完整代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="keyword">import</span> socket               <span class="comment"># 导入 socket 模块</span></span><br><span class="line"> </span><br><span class="line">s = socket.socket()         <span class="comment"># 创建 socket 对象</span></span><br><span class="line">host = socket.gethostname() <span class="comment"># 获取本地主机名</span></span><br><span class="line">port = <span class="number">12345</span>                <span class="comment"># 设置端口号</span></span><br><span class="line"> </span><br><span class="line">s.connect((host, port))</span><br><span class="line"><span class="built_in">print</span> s.recv(<span class="number">1024</span>)</span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python-SMTP发送邮件"><a href="#Python-SMTP发送邮件" class="headerlink" title="Python SMTP发送邮件"></a>Python SMTP发送邮件</h2><p>SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。</p>
-<p>python的smtplib提供了一种很方便的途径发送电子邮件。它对smtp协议进行了简单的封装。</p>
-<p>Python创建 SMTP 对象语法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"></span><br><span class="line">smtpObj = smtplib.SMTP( [host [, port [, local_hostname]]] )</span><br></pre></td></tr></table></figure>
-<p>参数说明：</p>
-<pre><code>host: SMTP 服务器主机。 你可以指定主机的ip地址或者域名如: runoob.com，这个是可选参数。
-port: 如果你提供了 host 参数, 你需要指定 SMTP 服务使用的端口号，一般情况下 SMTP 端口号为25。
-local_hostname: 如果 SMTP 在你的本机上，你只需要指定服务器地址为 localhost 即可。 
-</code></pre>
-<p>Python SMTP 对象使用 sendmail 方法发送邮件，语法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SMTP.sendmail(from_addr, to_addrs, msg[, mail_options, rcpt_options])</span><br></pre></td></tr></table></figure>
-
-<p>参数说明：</p>
-<pre><code>from_addr: 邮件发送者地址。
-to_addrs: 字符串列表，邮件发送地址。
-msg: 发送消息 
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="keyword">from</span> email.header <span class="keyword">import</span> Header</span><br><span class="line"> </span><br><span class="line">sender = <span class="string">&#x27;from@runoob.com&#x27;</span></span><br><span class="line">receivers = [<span class="string">&#x27;429240967@qq.com&#x27;</span>]  <span class="comment"># 接收邮件，可设置为你的QQ邮箱或者其他邮箱</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 三个参数：第一个为文本内容，第二个 plain 设置文本格式，第三个 utf-8 设置编码</span></span><br><span class="line">message = MIMEText(<span class="string">&#x27;Python 邮件发送测试...&#x27;</span>, <span class="string">&#x27;plain&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">message[<span class="string">&#x27;From&#x27;</span>] = Header(<span class="string">&quot;菜鸟教程&quot;</span>, <span class="string">&#x27;utf-8&#x27;</span>)   <span class="comment"># 发送者</span></span><br><span class="line">message[<span class="string">&#x27;To&#x27;</span>] =  Header(<span class="string">&quot;测试&quot;</span>, <span class="string">&#x27;utf-8&#x27;</span>)        <span class="comment"># 接收者</span></span><br><span class="line"> </span><br><span class="line">subject = <span class="string">&#x27;Python SMTP 邮件测试&#x27;</span></span><br><span class="line">message[<span class="string">&#x27;Subject&#x27;</span>] = Header(subject, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    smtpObj = smtplib.SMTP(<span class="string">&#x27;localhost&#x27;</span>)</span><br><span class="line">    smtpObj.sendmail(sender, receivers, message.as_string())</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&quot;邮件发送成功&quot;</span></span><br><span class="line"><span class="keyword">except</span> smtplib.SMTPException:</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&quot;Error: 无法发送邮件&quot;</span></span><br></pre></td></tr></table></figure>
-<p>如果我们本机没有 sendmail 访问，也可以使用其他邮件服务商的 SMTP 访问（QQ、网易、Google等）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="keyword">from</span> email.header <span class="keyword">import</span> Header</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 第三方 SMTP 服务</span></span><br><span class="line">mail_host=<span class="string">&quot;smtp.XXX.com&quot;</span>  <span class="comment">#设置服务器</span></span><br><span class="line">mail_user=<span class="string">&quot;XXXX&quot;</span>    <span class="comment">#用户名</span></span><br><span class="line">mail_pass=<span class="string">&quot;XXXXXX&quot;</span>   <span class="comment">#口令 </span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">sender = <span class="string">&#x27;from@runoob.com&#x27;</span></span><br><span class="line">receivers = [<span class="string">&#x27;429240967@qq.com&#x27;</span>]  <span class="comment"># 接收邮件，可设置为你的QQ邮箱或者其他邮箱</span></span><br><span class="line"> </span><br><span class="line">message = MIMEText(<span class="string">&#x27;Python 邮件发送测试...&#x27;</span>, <span class="string">&#x27;plain&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">message[<span class="string">&#x27;From&#x27;</span>] = Header(<span class="string">&quot;菜鸟教程&quot;</span>, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">message[<span class="string">&#x27;To&#x27;</span>] =  Header(<span class="string">&quot;测试&quot;</span>, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"> </span><br><span class="line">subject = <span class="string">&#x27;Python SMTP 邮件测试&#x27;</span></span><br><span class="line">message[<span class="string">&#x27;Subject&#x27;</span>] = Header(subject, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    smtpObj = smtplib.SMTP() </span><br><span class="line">    smtpObj.connect(mail_host, <span class="number">25</span>)    <span class="comment"># 25 为 SMTP 端口号</span></span><br><span class="line">    smtpObj.login(mail_user,mail_pass)  </span><br><span class="line">    smtpObj.sendmail(sender, receivers, message.as_string())</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&quot;邮件发送成功&quot;</span></span><br><span class="line"><span class="keyword">except</span> smtplib.SMTPException:</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&quot;Error: 无法发送邮件&quot;</span></span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-email.html">其他例子详情</a></p>
-<h2 id="Python-多线程（具体详情以后补充）"><a href="#Python-多线程（具体详情以后补充）" class="headerlink" title="Python 多线程（具体详情以后补充）"></a>Python 多线程（具体详情以后补充）</h2><p>多线程类似于同时执行多个不同程序，多线程运行有如下优点：</p>
-<pre><code>使用线程可以把占据长时间的程序中的任务放到后台去处理。
-用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度
-程序的运行速度可能加快
-在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下我们可以释放一些珍贵的资源如内存占用等等。
-</code></pre>
-<p>Python中使用线程有两种方式：函数或者用类来包装线程对象。</p>
-<p>函数式：调用thread模块中的start_new_thread()函数来产生新线程。语法如下:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thread.start_new_thread ( function, args[, kwargs] )</span><br></pre></td></tr></table></figure>
-<p>参数说明:</p>
-<pre><code>function - 线程函数。
-args - 传递给线程函数的参数,他必须是个tuple类型。
-kwargs - 可选参数。
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thread</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 为线程定义一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_time</span>(<span class="params"> threadName, delay</span>):</span></span><br><span class="line">   count = <span class="number">0</span></span><br><span class="line">   <span class="keyword">while</span> count &lt; <span class="number">5</span>:</span><br><span class="line">      time.sleep(delay)</span><br><span class="line">      count += <span class="number">1</span></span><br><span class="line">      <span class="built_in">print</span> <span class="string">&quot;%s: %s&quot;</span> % ( threadName, time.ctime(time.time()) )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 创建两个线程</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   thread.start_new_thread( print_time, (<span class="string">&quot;Thread-1&quot;</span>, <span class="number">2</span>, ) )</span><br><span class="line">   thread.start_new_thread( print_time, (<span class="string">&quot;Thread-2&quot;</span>, <span class="number">4</span>, ) )</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="built_in">print</span> <span class="string">&quot;Error: unable to start thread&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">   <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Python-GUI编程-Tkinter"><a href="#Python-GUI编程-Tkinter" class="headerlink" title="Python GUI编程(Tkinter)"></a>Python GUI编程(Tkinter)</h2><p>Python 提供了多个图形开发界面的库，几个常用 Python GUI 库如下：</p>
-<p>Tkinter： Tkinter 模块(Tk 接口)是 Python 的标准 Tk GUI 工具包的接口 .Tk 和 Tkinter 可以在大多数的 Unix 平台下使用,同样可以应用在 Windows 和 Macintosh 系统里。Tk8.0 的后续版本可以实现本地窗口风格,并良好地运行在绝大多数平台中。</p>
-<p> wxPython：wxPython 是一款开源软件，是 Python 语言的一套优秀的 GUI 图形库，允许 Python 程序员很方便的创建完整的、功能健全的 GUI 用户界面。</p>
-<p>Jython：Jython 程序可以和 Java 无缝集成。除了一些标准模块，Jython 使用 Java 的模块。Jython 几乎拥有标准的Python 中不依赖于 C 语言的全部模块。比如，Jython 的用户界面将使用 Swing，AWT或者 SWT。Jython 可以被动态或静态地编译成 Java 字节</p>
-<p><strong>Tkinter 编程</strong></p>
-<p><code>import tkinter</code></p>
-<p><strong>Tkinter 组件</strong><br><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-gui-tkinter.html">点击</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-100-examples.html">python练习100例</a></p>
+        <h2 id="SQL-连接-JOIN"><a href="#SQL-连接-JOIN" class="headerlink" title="SQL 连接(JOIN)"></a>SQL 连接(JOIN)</h2><span id="more"></span>
+<p>SQL join 用于把来自两个或多个表的行结合起来</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406165337804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>仔细观察下面的实例：<br><img src="https://img-blog.csdnimg.cn/20210406165612702.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="不同的-SQL-JOIN"><a href="#不同的-SQL-JOIN" class="headerlink" title="不同的 SQL JOIN"></a>不同的 SQL JOIN</h2><p>下面要详细的讲这些join的区别，先把这些总体的看一下。<br><img src="https://img-blog.csdnimg.cn/20210406165708287.png" alt="在这里插入图片描述"></p>
+<h2 id="SQL-INNER-JOIN-关键字"><a href="#SQL-INNER-JOIN-关键字" class="headerlink" title="SQL INNER JOIN 关键字"></a>SQL INNER JOIN 关键字</h2><p>INNER JOIN 关键字在表中存在至少一个匹配时返回行。<br><img src="https://img-blog.csdnimg.cn/20210406165751559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里的例子与上面的例子一样，只是多了一个order by 排序的意思，如果没有声明的话默认是由小到大。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406165944669.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-LEFT-JOIN-关键字"><a href="#SQL-LEFT-JOIN-关键字" class="headerlink" title="SQL LEFT JOIN 关键字"></a>SQL LEFT JOIN 关键字</h2><p>LEFT JOIN 关键字从左表（table1）返回所有的行，即使右表（table2）中没有匹配。如果右表中没有匹配，则结果为 NULL。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406170155197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406170323218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>实例中我们把 Websites 作为左表，access_log 作为右表</p>
+<h2 id="SQL-RIGHT-JOIN-关键字"><a href="#SQL-RIGHT-JOIN-关键字" class="headerlink" title="SQL RIGHT JOIN 关键字"></a>SQL RIGHT JOIN 关键字</h2><p>RIGHT JOIN 关键字从右表（table2）返回所有的行，即使左表（table1）中没有匹配。如果左表中没有匹配，则结果为 NULL。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406170434966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210406170543964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-FULL-OUTER-JOIN-关键字"><a href="#SQL-FULL-OUTER-JOIN-关键字" class="headerlink" title="SQL FULL OUTER JOIN 关键字"></a>SQL FULL OUTER JOIN 关键字</h2><p>FULL OUTER JOIN 关键字只要左表（table1）和右表（table2）其中一个表中存在匹配，则返回行.</p>
+<p><strong>FULL OUTER JOIN 关键字结合了 LEFT JOIN 和 RIGHT JOIN 的结果。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20210406170746366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>注意：MySQL中不支持 FULL OUTER JOIN，SQL Server 支持</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20210406170853211.png" alt="在这里插入图片描述"><br>以上这些join要对比记忆，不要搞混。</p>
+<h2 id="SQL-UNION-操作符"><a href="#SQL-UNION-操作符" class="headerlink" title="SQL UNION 操作符"></a>SQL UNION 操作符</h2><p>SQL UNION 操作符合并两个或多个 SELECT 语句的结果。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406171003833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406171157907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>注意：<br>UNION 内部的每个 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 SELECT 语句中的列的顺序必须相同。</p>
+<p>UNION 不能用于列出两个表中所有的country。如果一些网站和APP来自同一个国家，每个国家只会列出一次。UNION 只会选取不同的值。请使用 UNION ALL 来选取重复的值！</p>
+<h2 id="SQL-UNION-ALL"><a href="#SQL-UNION-ALL" class="headerlink" title="SQL UNION ALL"></a>SQL UNION ALL</h2><p><img src="https://img-blog.csdnimg.cn/20210406171315767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="带有-WHERE-的-SQL-UNION-ALL"><a href="#带有-WHERE-的-SQL-UNION-ALL" class="headerlink" title="带有 WHERE 的 SQL UNION ALL"></a>带有 WHERE 的 SQL UNION ALL</h2><p><img src="https://img-blog.csdnimg.cn/20210406171454132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-SELECT-INTO-语句"><a href="#SQL-SELECT-INTO-语句" class="headerlink" title="SQL SELECT INTO 语句"></a>SQL SELECT INTO 语句</h2><p>SELECT INTO 语句从一个表复制数据，然后把数据插入到另一个新表中。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406171717958.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406171805437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这些实例对比思考即可。</p>
+<h2 id="SQL-INSERT-INTO-SELECT-语句"><a href="#SQL-INSERT-INTO-SELECT-语句" class="headerlink" title="SQL INSERT INTO SELECT 语句"></a>SQL INSERT INTO SELECT 语句</h2><p>INSERT INTO SELECT 语句从一个表复制数据，然后把数据插入到一个已存在的表中。</p>
+<p>这里为了方便在写一次这个数据库。<br><img src="https://img-blog.csdnimg.cn/20210406172215337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>第一个是复制apps中的app_name和 country进入websites中，这里网上的教程写的有问题。<br><img src="https://img-blog.csdnimg.cn/20210406172327724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-CREATE-DATABASE-语句"><a href="#SQL-CREATE-DATABASE-语句" class="headerlink" title="SQL CREATE DATABASE 语句"></a>SQL CREATE DATABASE 语句</h2><p>CREATE DATABASE 语句用于创建数据库。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406172452926.png" alt="在这里插入图片描述"></p>
+<h2 id="SQL-CREATE-TABLE-语句"><a href="#SQL-CREATE-TABLE-语句" class="headerlink" title="SQL CREATE TABLE 语句"></a>SQL CREATE TABLE 语句</h2><p>CREATE TABLE 语句用于创建数据库中的表。</p>
+<p>表由行和列组成，每个表都必须有个表名。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406172959852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里做简要解释：<br>PersonID 列的数据类型是 int，包含整数。<br>LastName、FirstName、Address 和 City 列的数据类型是 varchar，包含字符，且这些字段的最大长度为 255 个字符。</p>
+<p>空的 “Persons” 表如下所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406173033605.png" alt="在这里插入图片描述"></p>
+<h2 id="SQL-约束（Constraints）"><a href="#SQL-约束（Constraints）" class="headerlink" title="SQL 约束（Constraints）"></a>SQL 约束（Constraints）</h2><p>SQL 约束用于规定表中的数据规则。</p>
+<p>如果存在违反约束的数据行为，行为会被约束终止。</p>
+<p>约束可以在创建表时规定（通过 CREATE TABLE 语句），或者在表创建之后规定（通过 ALTER TABLE 语句）。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406173123389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接下来我们会详细介绍每一种约束的具体用法</p>
+<h2 id="SQL-NOT-NULL-约束"><a href="#SQL-NOT-NULL-约束" class="headerlink" title="SQL NOT NULL 约束"></a>SQL NOT NULL 约束</h2><p>NOT NULL 约束强制列不接受 NULL 值。</p>
+<p>NOT NULL 约束强制字段始终包含值。这意味着，如果不向字段添加值，就无法插入新记录或者更新记录。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021040617335148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406173402459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-UNIQUE-约束"><a href="#SQL-UNIQUE-约束" class="headerlink" title="SQL UNIQUE 约束"></a>SQL UNIQUE 约束</h2><p>UNIQUE 约束唯一标识数据库表中的每条记录。</p>
+<p>UNIQUE 和 PRIMARY KEY 约束均为列或列集合提供了唯一性的保证。</p>
+<p>PRIMARY KEY 约束拥有自动定义的 UNIQUE 约束。</p>
+<p>请注意，每个表可以有多个 UNIQUE 约束，但是每个表只能有一个 PRIMARY KEY 约束<br>语法在不同使用的软件上略有不同。<br><img src="https://img-blog.csdnimg.cn/20210406173626621.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自行进行对比。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406174004457.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-PRIMARY-KEY-约束"><a href="#SQL-PRIMARY-KEY-约束" class="headerlink" title="SQL PRIMARY KEY 约束"></a>SQL PRIMARY KEY 约束</h2><p>PRIMARY KEY 约束唯一标识数据库表中的每条记录。</p>
+<p>主键必须包含唯一的值。</p>
+<p>主键列不能包含 NULL 值。</p>
+<p>每个表都应该有一个主键，并且每个表只能有一个主键。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406174202720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2021040617421830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-FOREIGN-KEY-约束"><a href="#SQL-FOREIGN-KEY-约束" class="headerlink" title="SQL FOREIGN KEY 约束"></a>SQL FOREIGN KEY 约束</h2><p>一个表中的 FOREIGN KEY 指向另一个表中的 UNIQUE KEY(唯一约束的键)。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406174405785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406174626422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406174735192.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-CHECK-约束"><a href="#SQL-CHECK-约束" class="headerlink" title="SQL CHECK 约束"></a>SQL CHECK 约束</h2><p>CHECK 约束用于限制列中的值的范围。</p>
+<p>如果对单个列定义 CHECK 约束，那么该列只允许特定的值。</p>
+<p>如果对一个表定义 CHECK 约束，那么此约束会基于行中其他列的值在特定的列中对值进行限制。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021040617494017.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406174948948.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="SQL-DEFAULT-约束"><a href="#SQL-DEFAULT-约束" class="headerlink" title="SQL DEFAULT 约束"></a>SQL DEFAULT 约束</h2><p>DEFAULT 约束用于向列中插入默认值。</p>
+<p>如果没有规定其他的值，那么会将默认值添加到所有的新记录。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210406175049802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210406175127906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这些我认为是不用细看的，到时候用到的时候，查一下，多用几次也就记住了。<br><img src="https://img-blog.csdnimg.cn/20210406175212840.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzM3MzM1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
 
@@ -353,7 +323,7 @@ kwargs - 可选参数。
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python学习   基础   重点</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
         		</li>
       		
 		</ul>
@@ -409,7 +379,7 @@ kwargs - 可选参数。
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io.github.io/2021/03/12/python%E6%95%99%E7%A8%8B%20(3)/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io.github.io/2021/04/06/sql%E5%8F%B2%E4%B8%8A%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%99%E7%A8%8B3%EF%BC%88%E5%88%9D%E5%AD%A6%E8%80%85%E9%83%BD%E8%83%BD%E7%9C%8B%E5%BE%97%E6%87%82%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -423,18 +393,18 @@ kwargs - 可选参数。
   
 <nav id="article-nav">
   
-    <a href="/2021/03/18/python%E6%95%99%E7%A8%8B(1)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/06/sql%E5%8F%B2%E4%B8%8A%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%99%E7%A8%8B4/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Python教程（1）
+          sql你一定能看懂的教程4（初学者都看得懂）
         
       </div>
     </a>
   
   
-    <a href="/2021/03/12/python%E6%95%99%E7%A8%8B%20(2)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python教程 (2)</div>
+    <a href="/2021/04/05/sql%E4%BD%A0%E4%B8%80%E5%AE%9A%E7%9C%8B%E7%9A%84%E6%87%82%E7%9A%84%E6%95%99%E7%A8%8B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sql你一定能看懂的教程2（高级教程）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -461,7 +431,7 @@ kwargs - 可选参数。
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">Python 面向对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%9C%80%E8%A6%81%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%AD%A6%E4%B9%A0%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">Python 正则表达式（需要进一步学习）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-CGI%E7%BC%96%E7%A8%8B%EF%BC%88%E5%9C%A8%E5%AD%A6%E5%89%8D%E7%AB%AF%E6%98%AF%E5%8F%AF%E4%BB%A5%E6%B7%B1%E5%8C%96%E5%AD%A6%E4%B9%A0%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">Python CGI编程（在学前端是可以深化学习）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E6%93%8D%E4%BD%9C-MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">4.</span> <span class="toc-text">Python 操作 MySQL 数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%EF%BC%88%E5%85%B7%E4%BD%93%E5%9C%A8sql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E7%BB%A7%E7%BB%AD%E5%AD%A6%E4%B9%A0%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">创建数据库表（具体在sql数据库上继续学习）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B"><span class="toc-number">6.</span> <span class="toc-text">Python 网络编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-SMTP%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">Python SMTP发送邮件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E5%A4%9A%E7%BA%BF%E7%A8%8B%EF%BC%88%E5%85%B7%E4%BD%93%E8%AF%A6%E6%83%85%E4%BB%A5%E5%90%8E%E8%A1%A5%E5%85%85%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">Python 多线程（具体详情以后补充）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-GUI%E7%BC%96%E7%A8%8B-Tkinter"><span class="toc-number">9.</span> <span class="toc-text">Python GUI编程(Tkinter)</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-%E8%BF%9E%E6%8E%A5-JOIN"><span class="toc-number">1.</span> <span class="toc-text">SQL 连接(JOIN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E7%9A%84-SQL-JOIN"><span class="toc-number">2.</span> <span class="toc-text">不同的 SQL JOIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-INNER-JOIN-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">3.</span> <span class="toc-text">SQL INNER JOIN 关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-LEFT-JOIN-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">4.</span> <span class="toc-text">SQL LEFT JOIN 关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-RIGHT-JOIN-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">5.</span> <span class="toc-text">SQL RIGHT JOIN 关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-FULL-OUTER-JOIN-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">6.</span> <span class="toc-text">SQL FULL OUTER JOIN 关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-UNION-%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">7.</span> <span class="toc-text">SQL UNION 操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-UNION-ALL"><span class="toc-number">8.</span> <span class="toc-text">SQL UNION ALL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89-WHERE-%E7%9A%84-SQL-UNION-ALL"><span class="toc-number">9.</span> <span class="toc-text">带有 WHERE 的 SQL UNION ALL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-SELECT-INTO-%E8%AF%AD%E5%8F%A5"><span class="toc-number">10.</span> <span class="toc-text">SQL SELECT INTO 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-INSERT-INTO-SELECT-%E8%AF%AD%E5%8F%A5"><span class="toc-number">11.</span> <span class="toc-text">SQL INSERT INTO SELECT 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-CREATE-DATABASE-%E8%AF%AD%E5%8F%A5"><span class="toc-number">12.</span> <span class="toc-text">SQL CREATE DATABASE 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-CREATE-TABLE-%E8%AF%AD%E5%8F%A5"><span class="toc-number">13.</span> <span class="toc-text">SQL CREATE TABLE 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-%E7%BA%A6%E6%9D%9F%EF%BC%88Constraints%EF%BC%89"><span class="toc-number">14.</span> <span class="toc-text">SQL 约束（Constraints）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-NOT-NULL-%E7%BA%A6%E6%9D%9F"><span class="toc-number">15.</span> <span class="toc-text">SQL NOT NULL 约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-UNIQUE-%E7%BA%A6%E6%9D%9F"><span class="toc-number">16.</span> <span class="toc-text">SQL UNIQUE 约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-PRIMARY-KEY-%E7%BA%A6%E6%9D%9F"><span class="toc-number">17.</span> <span class="toc-text">SQL PRIMARY KEY 约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-FOREIGN-KEY-%E7%BA%A6%E6%9D%9F"><span class="toc-number">18.</span> <span class="toc-text">SQL FOREIGN KEY 约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-CHECK-%E7%BA%A6%E6%9D%9F"><span class="toc-number">19.</span> <span class="toc-text">SQL CHECK 约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-DEFAULT-%E7%BA%A6%E6%9D%9F"><span class="toc-number">20.</span> <span class="toc-text">SQL DEFAULT 约束</span></a></li></ol>
                     </div>
                 </span>
             </div>
