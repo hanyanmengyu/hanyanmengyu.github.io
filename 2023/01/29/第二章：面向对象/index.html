@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://hanyanmengyu.github.io">
   <title>寒烟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第二章：面向对象面向对象是程序中一个非常重要的思想，它被很多同学理解成了一个比较难，比较深奥的问题，其实不然。面向对象很简单，简而言之就是程序之中所有的操作都需要通过对象来完成。  举例来说： 操作浏览器要使用window对象 操作网页要使用document对象 操作控制台要使用console对象    一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算">
+  <meta name="description" content="第二章：面向对象面向对象是程序中一个非常重要的思想，它被很多同学理解成了一个比较难，比较深奥的问题，其实不然。面向对象很简单，简而言之就是程序之中所有的操作都需要通过对象来完成。  举例来说： 操作浏览器要使用window对象 操作网页要使用document对象 操作控制台要使用console对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="寒烟">
 <meta property="og:url" content="https://hanyanmengyu.github.io/2023/01/29/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="寒烟">
-<meta property="og:description" content="第二章：面向对象面向对象是程序中一个非常重要的思想，它被很多同学理解成了一个比较难，比较深奥的问题，其实不然。面向对象很简单，简而言之就是程序之中所有的操作都需要通过对象来完成。  举例来说： 操作浏览器要使用window对象 操作网页要使用document对象 操作控制台要使用console对象    一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算">
+<meta property="og:description" content="第二章：面向对象面向对象是程序中一个非常重要的思想，它被很多同学理解成了一个比较难，比较深奥的问题，其实不然。面向对象很简单，简而言之就是程序之中所有的操作都需要通过对象来完成。  举例来说： 操作浏览器要使用window对象 操作网页要使用document对象 操作控制台要使用console对象">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-29T06:46:22.758Z">
-<meta property="article:modified_time" content="2023-01-29T07:17:55.915Z">
+<meta property="article:modified_time" content="2023-01-29T07:41:14.767Z">
 <meta property="article:author" content="Hanyan">
 <meta name="twitter:card" content="summary">
   
@@ -173,11 +173,11 @@
 <li>举例来说：<ul>
 <li>操作浏览器要使用window对象</li>
 <li>操作网页要使用document对象</li>
-<li>操作控制台要使用console对象</li>
+<li>操作控制台要使用console对象<span id="more"></span>
+一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算机程序的本质就是对现实事物的抽象，抽象的反义词是具体，比如：照片是对一个具体的人的抽象，汽车模型是对具体汽车的抽象等等。程序也是对事物的抽象，在程序中我们可以表示一个人、一条狗、一把枪、一颗子弹等等所有的事物。一个事物到了程序中就变成了一个对象。</li>
 </ul>
 </li>
 </ul>
-<p>一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算机程序的本质就是对现实事物的抽象，抽象的反义词是具体，比如：照片是对一个具体的人的抽象，汽车模型是对具体汽车的抽象等等。程序也是对事物的抽象，在程序中我们可以表示一个人、一条狗、一把枪、一颗子弹等等所有的事物。一个事物到了程序中就变成了一个对象。</p>
 <p>在程序中所有的对象都被分成了两个部分数据和功能，以人为例，人的姓名、性别、年龄、身高、体重等属于数据，人可以说话、走路、吃饭、睡觉这些属于人的功能。数据在对象中被成为属性，而功能就被称为方法。所以简而言之，在程序中一切皆是对象。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">## 1、类（class）</span><br><span class="line"></span><br><span class="line">要想面向对象，操作对象，首先便要拥有对象，那么下一个问题就是如何创建对象。要创建对象，必须要先定义类，所谓的类可以理解为对象的模型，程序中可以根据类创建指定类型的对象，举例来说：可以通过Person类来创建人的对象，通过Dog类创建狗的对象，通过Car类来创建汽车的对象，不同的类可以用来创建不同的对象。</span><br><span class="line"></span><br><span class="line">- 定义类：</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;typescript</span><br><span class="line">    class 类名 &#123;</span><br><span class="line">    	属性名: 类型;</span><br><span class="line">    	</span><br><span class="line">    	constructor(参数: 类型)&#123;</span><br><span class="line">    		this.属性名 &#x3D; 参数;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	方法名()&#123;</span><br><span class="line">    		....</span><br><span class="line">    	&#125;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
@@ -640,11 +640,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
               </li>
              
               <li class="article-tag-list-item">
