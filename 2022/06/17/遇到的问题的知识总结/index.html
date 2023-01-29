@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hanyanmengyu.github.io">
-  <title>寒烟</title>
+  <title>遇到的所有问题总结 | 寒烟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="path的join和resolve的使用区别12345678910const path &#x3D; require(&amp;#x27;path&amp;#x27;); let myPath &#x3D; path.join(__dirname,&amp;#x27;&#x2F;img&#x2F;so&amp;#x27;); let myPath2 &#x3D; path.join(__dirname,&amp;#x27;.&#x2F;img&#x2F;so&amp;#x27;); let myPath3 &#x3D; p">
+  <meta name="description" content="path的join和resolve的使用区别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="寒烟">
-<meta property="og:url" content="https://hanyanmengyu.github.io/2023/01/29/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="遇到的所有问题总结">
+<meta property="og:url" content="https://hanyanmengyu.github.io/2022/06/17/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="寒烟">
-<meta property="og:description" content="path的join和resolve的使用区别12345678910const path &#x3D; require(&amp;#x27;path&amp;#x27;); let myPath &#x3D; path.join(__dirname,&amp;#x27;&#x2F;img&#x2F;so&amp;#x27;); let myPath2 &#x3D; path.join(__dirname,&amp;#x27;.&#x2F;img&#x2F;so&amp;#x27;); let myPath3 &#x3D; p">
+<meta property="og:description" content="path的join和resolve的使用区别">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220531095924614.png">
 <meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220607135731971.png">
 <meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220608102457090.png">
-<meta property="article:published_time" content="2023-01-29T06:45:15.209Z">
-<meta property="article:modified_time" content="2022-06-20T05:42:43.206Z">
+<meta property="article:published_time" content="2022-06-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T08:33:22.512Z">
 <meta property="article:author" content="Hanyan">
+<meta property="article:tag" content="总结  基础   重点">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220531095924614.png">
   
@@ -170,9 +171,25 @@
             <article id="post-遇到的问题的知识总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      遇到的所有问题总结
+    </h1>
+  
+
+        
+        <a href="/2022/06/17/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2022-06-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-17</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="path的join和resolve的使用区别"><a href="#path的join和resolve的使用区别" class="headerlink" title="path的join和resolve的使用区别"></a>path的join和resolve的使用区别</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath = path.join(__dirname,<span class="string">&#x27;/img/so&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath2 = path.join(__dirname,<span class="string">&#x27;./img/so&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath3 = path.resolve(__dirname,<span class="string">&#x27;/img/so&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath4 = path.resolve(__dirname,<span class="string">&#x27;./img/so&#x27;</span>); </span><br><span class="line"><span class="built_in">console</span>.log(__dirname); <span class="comment">//D:\myProgram\test </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath); <span class="comment">//D:\myProgram\test\img\so </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath2); <span class="comment">//D:\myProgram\test\img\so </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath3); <span class="comment">//D:\img\so&lt;br&gt; </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath4); <span class="comment">//D:\myProgram\test\img\so</span></span><br></pre></td></tr></table></figure>
+        <h1 id="path的join和resolve的使用区别"><a href="#path的join和resolve的使用区别" class="headerlink" title="path的join和resolve的使用区别"></a>path的join和resolve的使用区别</h1><span id="more"></span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath = path.join(__dirname,<span class="string">&#x27;/img/so&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath2 = path.join(__dirname,<span class="string">&#x27;./img/so&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath3 = path.resolve(__dirname,<span class="string">&#x27;/img/so&#x27;</span>); </span><br><span class="line"><span class="keyword">let</span> myPath4 = path.resolve(__dirname,<span class="string">&#x27;./img/so&#x27;</span>); </span><br><span class="line"><span class="built_in">console</span>.log(__dirname); <span class="comment">//D:\myProgram\test </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath); <span class="comment">//D:\myProgram\test\img\so </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath2); <span class="comment">//D:\myProgram\test\img\so </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath3); <span class="comment">//D:\img\so&lt;br&gt; </span></span><br><span class="line"><span class="built_in">console</span>.log(myPath4); <span class="comment">//D:\myProgram\test\img\so</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="连接路径：path-join"><a href="#连接路径：path-join" class="headerlink" title="连接路径：path.join"></a>连接路径：path.join</h2><p>path.join()方法可以连接任意多个路径字符串。要连接的多个路径可做为参数传入。path.join()方法在接边路径的同时也会对路径进行规范化.</p>
 <h2 id="路径解析：path-resolve"><a href="#路径解析：path-resolve" class="headerlink" title="路径解析：path.resolve"></a>路径解析：path.resolve</h2><p>path.resolve()方法可以将多个路径解析为一个规范化的绝对路径。其处理方式类似于对这些路径逐一进行cd操作，与cd操作不同的是，这引起路径可以是文件，并且可<strong>不必实际存在</strong>（resolve()方法不会利用底层的文件系统判断路径是否存在，而只是进行路径字符串操作）</p>
@@ -242,6 +259,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">总结  基础   重点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -292,7 +320,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io.github.io/2023/01/29/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=hanyanmengyu.github.io.github.io/2022/06/17/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +334,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/01/29/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/06/24/8.HTTP&Tomcat&Servlet/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          HTTP&amp;Tomcat&amp;Servlet
         
       </div>
     </a>
   
   
-    <a href="/2023/01/29/js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2022/05/20/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">typescript (总结)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -462,11 +490,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JSP  基础   重点</a>
+                <a href="javascript:void(0)" class="js-tag color2">会话技术 基础  重点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">会话技术 基础  重点</a>
+                <a href="javascript:void(0)" class="js-tag color3">JSP  基础   重点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,11 +522,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Mybatis 基础  重点</a>
+                <a href="javascript:void(0)" class="js-tag color3">HTML&CSS   基础  重点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HTML&CSS   基础  重点</a>
+                <a href="javascript:void(0)" class="js-tag color5">Mybatis 基础  重点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,11 +534,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
+                <a href="javascript:void(0)" class="js-tag color2">HTTP&Tomcat&Servlet 基础  重点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTTP&Tomcat&Servlet 基础  重点</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,7 +546,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -538,11 +566,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SpringMVC  基础   重点</a>
+                <a href="javascript:void(0)" class="js-tag color3">axios 基础  重点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">axios 基础  重点</a>
+                <a href="javascript:void(0)" class="js-tag color4">SpringMVC  基础   重点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -570,6 +598,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">js  基础   重点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
@@ -578,7 +610,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">正则表达式  基础   重点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">typescript  基础   重点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">总结  基础   重点</a>
               </li>
             
             <div class="clearfix"></div>
