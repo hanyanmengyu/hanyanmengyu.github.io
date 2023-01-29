@@ -161,575 +161,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-html学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML-简介"><a href="#HTML-简介" class="headerlink" title="HTML 简介"></a>HTML 简介</h1><h2 id="什么是-HTML？"><a href="#什么是-HTML？" class="headerlink" title="什么是 HTML？"></a>什么是 HTML？</h2><p>HTML 是用来描述网页的一种语言。</p>
-<ul>
-<li>HTML 指的是超文本标记语言 (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage)</li>
-<li>HTML 不是一种编程语言，而是一种<em>标记语言</em> (markup language)</li>
-<li>标记语言是一套<em>标记标签</em> (markup tag)</li>
-<li>HTML 使用<em>标记标签</em>来描述网页</li>
-</ul>
-<h2 id="HTML结构图"><a href="#HTML结构图" class="headerlink" title="HTML结构图"></a>HTML结构图</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509135432898.png" alt="image-20220509135432898"></p>
-<h2 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509135709909.png" alt="image-20220509135709909"></p>
-<h2 id="HTML-元素"><a href="#HTML-元素" class="headerlink" title="HTML 元素"></a>HTML 元素</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509135723259.png" alt="image-20220509135723259"></p>
-<h2 id="lt-DOCTYPE-gt-声明"><a href="#lt-DOCTYPE-gt-声明" class="headerlink" title="&lt;!DOCTYPE&gt; 声明"></a>&lt;!DOCTYPE&gt; 声明</h2><!DOCTYPE><p>声明有助于浏览器中正确显示网页。</p>
-<p>网络上有很多不同的文件，如果能够正确声明HTML的版本，浏览器就能正确显示网页内容。</p>
-<h1 id="HTML-基础"><a href="#HTML-基础" class="headerlink" title="HTML 基础"></a>HTML 基础</h1><h2 id="HTML-标题"><a href="#HTML-标题" class="headerlink" title="HTML 标题"></a>HTML 标题</h2><p>HTML 标题（Heading）是通过<h1> - <h6> 标签来定义的</p>
-<h1>这是一个标题</h1> <h2>这是一个标题</h2> <h3>这是一个标题</h3>
-
-<h2 id="HTML-段落"><a href="#HTML-段落" class="headerlink" title="HTML 段落"></a>HTML 段落</h2><p>HTML 段落是通过标签 <p> 来定义的。</p>
-<p>这是一个段落。</p> <p>这是另外一个段落。</p>
-
-<h3 id="HTML-水平线"><a href="#HTML-水平线" class="headerlink" title="HTML 水平线"></a>HTML 水平线</h3><p>这是一个段落。</p> <hr> <p>这是一个段落。</p> <hr> <p>这是一个段落。</p>
-
-<h2 id="HTML-链接"><a href="#HTML-链接" class="headerlink" title="HTML 链接"></a>HTML 链接</h2><p>HTML 链接是通过标签 <a> 来定义的。</p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com">这是一个链接</a></p>
-<h3 id="target-属性"><a href="#target-属性" class="headerlink" title="target 属性"></a>target 属性</h3><p><a> 标签的 target 属性规定在何处打开链接文档。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509141539520.png" alt="image-20220509141539520"></p>
-<h2 id="HTML-图像"><a href="#HTML-图像" class="headerlink" title="HTML 图像"></a>HTML 图像</h2><h3 id="源属性（Src）"><a href="#源属性（Src）" class="headerlink" title="源属性（Src）"></a>源属性（Src）</h3><p>src 指 “source”。源属性的值是图像的 URL 地址。</p>
-<h3 id="Alt属性"><a href="#Alt属性" class="headerlink" title="Alt属性"></a>Alt属性</h3><p>alt 属性用来为图像定义一串预备的可替换的文本。</p>
-<p>替换文本属性的值是用户定义的。</p>
-<img src="boat.gif" alt="Big Boat">
-
-<p>在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。</p>
-<h3 id="设置图像的高度与宽度"><a href="#设置图像的高度与宽度" class="headerlink" title="设置图像的高度与宽度"></a>设置图像的高度与宽度</h3><img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228">
-
-<h2 id="HTML-属性"><a href="#HTML-属性" class="headerlink" title="HTML 属性"></a>HTML 属性</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509140325279.png" alt="image-20220509140325279"></p>
-<h2 id="HTML-注释"><a href="#HTML-注释" class="headerlink" title="HTML 注释"></a>HTML 注释</h2><!-- 这是一个注释 -->
-
-<h2 id="HTML-折行"><a href="#HTML-折行" class="headerlink" title="HTML 折行"></a>HTML 折行</h2><p>如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 <strong><br></strong></p>
-<p>这个<br>段落<br>演示了分行的效果</p>
-
-<h2 id="HTML-文本格式化标签"><a href="#HTML-文本格式化标签" class="headerlink" title="HTML 文本格式化标签"></a>HTML 文本格式化标签</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509141106659.png" alt="image-20220509141106659"></p>
-<h1 id="HTML-样式-CSS"><a href="#HTML-样式-CSS" class="headerlink" title="HTML 样式- CSS"></a>HTML 样式- CSS</h1><p>CSS 可以通过以下方式添加到HTML中:</p>
-<ul>
-<li>内联样式- 在HTML元素中使用”style” <strong>属性</strong></li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color:blue;margin-left:20px;&quot;</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>内部样式表 -在HTML文档头部 <head> 区域使用<style> <strong>元素</strong> 来包含CSS</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">body</span> &#123;<span class="attribute">background-color</span>:yellow;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:blue;&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>外部引用 - 使用外部 CSS <strong>文件</strong></li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="HTML-表格"><a href="#HTML-表格" class="headerlink" title="HTML 表格"></a>HTML 表格</h1><table border="1">     
-    <tr>        
-    <td>row 1, cell 1</td>        
-    <td>row 1, cell 2</td>     
-    </tr>     
-    <tr>         
-        <td>row 2, cell 1</td>         
-        <td>row 2, cell 2</td>     
-    </tr> 
-</table>
-
-<h2 id="HTML-表格表头"><a href="#HTML-表格表头" class="headerlink" title="HTML 表格表头"></a>HTML 表格表头</h2><table border="1">    
-    <tr>         
-        <th>Header 1</th>         
-        <th>Header 2</th>    
-    </tr>     
-    <tr>        
-        <td>row 1, cell 1</td>        
-        <td>row 1, cell 2</td>     
-    </tr>     
-    <tr>         
-        <td>row 2, cell 1</td>        
-        <td>row 2, cell 2</td>     
-    </tr> 
-</table>
-
-<h1 id="HTML-列表"><a href="#HTML-列表" class="headerlink" title="HTML 列表"></a>HTML 列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
-<li>Coffee</li>
-<li>Milk</li>
-</ul>
-
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
-<li>Coffee</li>
-<li>Milk</li>
-</ol>
-
-<h2 id="HTML-自定义列表"><a href="#HTML-自定义列表" class="headerlink" title="HTML 自定义列表"></a>HTML 自定义列表</h2><p>自定义列表不仅仅是一列项目，而是项目及其注释的组合。</p>
-<p>自定义列表以 <dl> 标签开始。每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 <dd> 开始。</p>
-<dl>
-<dt>Coffee</dt>
-<dd>- black hot drink</dd>
-<dd>- white  hot drink</dd>
-<dt>Milk</dt>
-<dd>- white cold drink</dd>
-<dd>- black cold drink</dd>
-</dl>
-
-<h1 id="HTML-div和span"><a href="#HTML-div和span" class="headerlink" title="HTML div和span"></a>HTML div和span</h1><h2 id="HTML-区块元素"><a href="#HTML-区块元素" class="headerlink" title="HTML 区块元素"></a>HTML 区块元素</h2><p>块级元素在浏览器显示时，通常会以新行来开始（和结束）。</p>
-<p>实例: <h1>, <p>, <ul>, <table></p>
-<h2 id="HTML-内联元素"><a href="#HTML-内联元素" class="headerlink" title="HTML 内联元素"></a>HTML 内联元素</h2><p> <b>, <td>, <a>, <img></p>
-<h2 id="HTML-div元素"><a href="#HTML-div元素" class="headerlink" title="HTML div元素"></a>HTML div元素</h2><p>HTML <div> 元素是块级元素，它可用于组合其他 HTML 元素的容器</p>
-<h2 id="HTML-span元素"><a href="#HTML-span元素" class="headerlink" title="HTML span元素"></a>HTML span元素</h2><p>HTML <span> 元素是内联元素，可用作文本的容器</p>
-<h1 id="HTML-表单"><a href="#HTML-表单" class="headerlink" title="HTML 表单"></a>HTML 表单</h1><h2 id="HTML-表单-输入元素"><a href="#HTML-表单-输入元素" class="headerlink" title="HTML 表单 - 输入元素"></a>HTML 表单 - 输入元素</h2><p>输入标签 <strong><input></strong>,输入类型是由 <strong>type</strong> 属性定义</p>
-<h3 id="文本域（Text-Fields）"><a href="#文本域（Text-Fields）" class="headerlink" title="文本域（Text Fields）"></a>文本域（Text Fields）</h3><p>&lt;**form**&gt;<br>First name: &lt;**input** type=”text” name=”firstname”&gt;&lt;**br**&gt;<br>Last name: &lt;**input** type=”text” name=”lastname”&gt;<br>&lt;/**form**&gt;</p>
-<h3 id="密码字段"><a href="#密码字段" class="headerlink" title="密码字段"></a>密码字段</h3><p>&lt;**form**&gt;<br>Password: &lt;**input** type=”password” name=”pwd”&gt;<br>&lt;/**form**&gt;</p>
-<h3 id="单选按钮（Radio-Buttons）"><a href="#单选按钮（Radio-Buttons）" class="headerlink" title="单选按钮（Radio Buttons）"></a>单选按钮（Radio Buttons）</h3><p>&lt;**form** action=””&gt;<br>&lt;**input** type=”radio” name=”sex” value=”male”&gt;男&lt;**br**&gt;<br>&lt;**input** type=”radio” name=”sex” value=”female”&gt;女<br>&lt;/**form**&gt;</p>
-<h3 id="复选框（Checkboxes）"><a href="#复选框（Checkboxes）" class="headerlink" title="复选框（Checkboxes）"></a>复选框（Checkboxes）</h3><p>&lt;**form**&gt;<br>&lt;**input** type=”checkbox” name=”vehicle” value=”Bike”&gt;我喜欢自行车&lt;**br**&gt;<br>&lt;**input** type=”checkbox” name=”vehicle” value=”Car”&gt;我喜欢小汽车<br>&lt;/**form**&gt;</p>
-<h3 id="提交按钮-Submit"><a href="#提交按钮-Submit" class="headerlink" title="提交按钮(Submit)"></a>提交按钮(Submit)</h3><p>&lt;**form** name=”input” action=”html_form_action.php” method=”get”&gt;<br>Username: &lt;**input** type=”text” name=”user”&gt;<br>&lt;**input** type=”submit” value=”Submit”&gt;<br>&lt;/**form**&gt;</p>
-<h1 id="IFrame"><a href="#IFrame" class="headerlink" title="IFrame"></a><del>IFrame</del></h1><h1 id="HTML-颜色"><a href="#HTML-颜色" class="headerlink" title="HTML 颜色"></a>HTML 颜色</h1><p>HTML 颜色由红色、绿色、蓝色混合而成。</p>
-<h1 id="HTML-脚本"><a href="#HTML-脚本" class="headerlink" title="HTML 脚本"></a>HTML 脚本</h1><h2 id="script-标签"><a href="#script-标签" class="headerlink" title="script 标签"></a>script 标签</h2><script> document.write("Hello World!"); </script>
-
-<h2 id="noscript-标签"><a href="#noscript-标签" class="headerlink" title="noscript 标签"></a>noscript 标签</h2><p><noscript> 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时。</p>
-<h1 id="HTML-字符实体"><a href="#HTML-字符实体" class="headerlink" title="HTML 字符实体"></a>HTML 字符实体</h1><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220512155710929.png" alt="image-20220512155710929"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/01/29/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CSS-简介"><a href="#CSS-简介" class="headerlink" title="CSS 简介"></a>CSS 简介</h1><h2 id="什么是-CSS"><a href="#什么是-CSS" class="headerlink" title="什么是 CSS?"></a>什么是 CSS?</h2><ul>
-<li>CSS 指层叠样式表 (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)</li>
-</ul>
-<h1 id="CSS-语法"><a href="#CSS-语法" class="headerlink" title="CSS 语法"></a>CSS 语法</h1><h2 id="CSS-实例"><a href="#CSS-实例" class="headerlink" title="CSS 实例"></a>CSS 实例</h2><p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220512160148591.png" alt="image-20220512160148591"></p>
-<p>CSS声明总是以分号 <strong>;</strong> 结束，声明总以大括号 <strong>{}</strong> 括起来:</p>
-<p><code>p &#123;color:red;text-align:center;&#125;</code></p>
-<h2 id="CSS-注释"><a href="#CSS-注释" class="headerlink" title="CSS 注释"></a>CSS 注释</h2><p>CSS注释以 <strong>/*</strong> 开始, 以 ***/** 结束</p>
-<h1 id="CSS-Id-和-Class"><a href="#CSS-Id-和-Class" class="headerlink" title="CSS Id 和 Class"></a>CSS Id 和 Class</h1><h2 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h2><p><code>#para1 &#123;    text-align:center;    color:red; &#125;</code></p>
-<h2 id="class-选择器"><a href="#class-选择器" class="headerlink" title="class 选择器"></a>class 选择器</h2><p><code>.center &#123;text-align:center;&#125;</code></p>
-<p>如果有多个class选择器</p>
-<p><strong>带空格的，表示“后代”关系</strong></p>
-<p><strong>不带空格，表示“且”的关系</strong></p>
-<h1 id="CSS-创建"><a href="#CSS-创建" class="headerlink" title="CSS 创建"></a>CSS 创建</h1><h2 id="如何插入样式表"><a href="#如何插入样式表" class="headerlink" title="如何插入样式表"></a>如何插入样式表</h2><p>插入样式表的方法有三种:</p>
-<ul>
-<li>外部样式表(External style sheet)</li>
-<li>内部样式表(Internal style sheet)</li>
-<li>内联样式(Inline style)</li>
-</ul>
-<h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><head> 
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
-
-<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><head> 
-    <style> 
-        hr {color:sienna;}
-        p {margin-left:20px;}
-        body {background-image:url("images/back40.gif");}
-    </style> 
-</head>
-
-<h2 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h2><p style="color:sienna;margin-left:20px">这是一个段落。</p>
-
-<h2 id="多重样式优先级"><a href="#多重样式优先级" class="headerlink" title="多重样式优先级"></a>多重样式优先级</h2><p><strong>（内联样式）Inline style &gt; （内部样式）Internal style sheet &gt;（外部样式）External style sheet &gt; 浏览器默认样式</strong></p>
-<h1 id="CSS-背景"><a href="#CSS-背景" class="headerlink" title="CSS 背景"></a>CSS 背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p>background-color 属性定义了元素的背景颜色.</p>
-<p><code>body &#123;background-color:#b0c4de;&#125;</code></p>
-<h2 id="背景图像"><a href="#背景图像" class="headerlink" title="背景图像"></a>背景图像</h2><p>background-image 属性描述了元素的背景图像.</p>
-<p><code>body &#123;background-image:url(&#39;paper.gif&#39;);&#125;</code></p>
-<h2 id="背景图像-水平或垂直平铺"><a href="#背景图像-水平或垂直平铺" class="headerlink" title="背景图像 - 水平或垂直平铺"></a>背景图像 - 水平或垂直平铺</h2><p><code>body &#123; background-image:url(&#39;gradient2.png&#39;); background-repeat:repeat-x; &#125;</code></p>
-<h2 id="背景图像-设置定位与不平铺"><a href="#背景图像-设置定位与不平铺" class="headerlink" title="背景图像- 设置定位与不平铺"></a>背景图像- 设置定位与不平铺</h2><p><code>body &#123; background-image:url(&#39;img_tree.png&#39;); background-repeat:no-repeat; &#125;</code></p>
-<p><code>body</code><br><code>&#123;</code><br><code>background-image:url(&#39;img_tree.png&#39;);</code><br><code>background-repeat:no-repeat;</code><br><code>background-position:right top;</code><br><code>&#125;</code></p>
-<h2 id="背景-简写属性"><a href="#背景-简写属性" class="headerlink" title="背景- 简写属性"></a>背景- 简写属性</h2><p>背景颜色的简写属性为 “background”:</p>
-<p><code>body &#123;background:#ffffff url(&#39;img_tree.png&#39;) no-repeat right top;&#125;</code></p>
-<p>当使用简写属性时，属性值的顺序为：:</p>
-<ul>
-<li>background-color</li>
-<li>background-image</li>
-<li>background-repeat</li>
-<li>background-attachment</li>
-<li>background-position</li>
-</ul>
-<h1 id="CSS-文本格式"><a href="#CSS-文本格式" class="headerlink" title="CSS 文本格式"></a>CSS 文本格式</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>颜色是通过CSS最经常的指定：</p>
-<ul>
-<li>十六进制值 - 如: <strong>＃FF0000</strong></li>
-<li>一个RGB值 - 如: <strong>RGB(255,0,0)</strong></li>
-<li>颜色的名称 - 如: <strong>red</strong></li>
-</ul>
-<p><code>body &#123;color:red;&#125; h1 &#123;color:#00ff00;&#125; h2 &#123;color:rgb(255,0,0);&#125;</code></p>
-<h2 id="文本的对齐方式"><a href="#文本的对齐方式" class="headerlink" title="文本的对齐方式"></a>文本的对齐方式</h2><p>当text-align设置为”justify”，每一行被展开为宽度相等，左，右外边距是对齐（如杂志和报纸）。</p>
-<p><code>h1 &#123;text-align:center;&#125; p.date &#123;text-align:right;&#125; p.main &#123;text-align:justify;&#125;</code></p>
-<h2 id="文本修饰"><a href="#文本修饰" class="headerlink" title="文本修饰"></a>文本修饰</h2><p>text-decoration 属性用来设置或删除文本的装饰。</p>
-<p>从设计的角度看 text-decoration属性主要是用来删除链接的下划线：</p>
-<p><code>a &#123;text-decoration:none;&#125;</code></p>
-<p><code>h1 &#123;text-decoration:overline;&#125; </code></p>
-<p><code>h2 &#123;text-decoration:line-through;&#125; </code></p>
-<p><code>h3 &#123;text-decoration:underline;&#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513093827111.png" alt="image-20220513093827111"></p>
-<h2 id="文本转换"><a href="#文本转换" class="headerlink" title="文本转换"></a>文本转换</h2><p><code>p.uppercase &#123;text-transform:uppercase;&#125; </code></p>
-<p><code>p.lowercase &#123;text-transform:lowercase;&#125;</code></p>
-<p><code> p.capitalize &#123;text-transform:capitalize;&#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513094139901.png" alt="image-20220513094139901"></p>
-<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><code>p &#123;text-indent:50px;&#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513094222741.png" alt="image-20220513094222741"></p>
-<h2 id="所有CSS文本属性"><a href="#所有CSS文本属性" class="headerlink" title="所有CSS文本属性"></a>所有CSS文本属性</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513094506975.png" alt="image-20220513094506975"></p>
-<h1 id="CSS-字体"><a href="#CSS-字体" class="headerlink" title="CSS 字体"></a>CSS 字体</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>font-family 属性设置文本的字体系列。</p>
-<p>如Font Family：”宋体”。</p>
-<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><ul>
-<li>正常 - 正常显示文本</li>
-<li>斜体 - 以斜体字显示的文字</li>
-</ul>
-<p> <code>&#123;font-style:normal;&#125;</code><br><code>&#123;font-style:italic;&#125;</code></p>
-<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>font-size 属性设置文本的大小。</p>
-<h2 id="用em来设置字体大小"><a href="#用em来设置字体大小" class="headerlink" title="用em来设置字体大小"></a>用em来设置字体大小</h2><p>1em和当前字体大小相等。在浏览器中默认的文字大小是16px。</p>
-<p>公式将像素转换为em：<strong>px/16=em</strong></p>
-<h1 id="CSS-链接"><a href="#CSS-链接" class="headerlink" title="CSS 链接"></a>CSS 链接</h1><h2 id="链接样式"><a href="#链接样式" class="headerlink" title="链接样式"></a>链接样式</h2><p>四个链接状态：</p>
-<ul>
-<li>a:link - 正常，未访问过的链接</li>
-<li>a:visited - 用户已访问过的链接</li>
-<li>a:hover - 当用户鼠标放在链接上时</li>
-<li>a:active - 链接被点击的那一刻</li>
-</ul>
-<p>当设置为若干链路状态的样式，也有一些顺序规则：</p>
-<ul>
-<li>a:hover 必须跟在 a:link 和 a:visited后面</li>
-<li>a:active 必须跟在 a:hover后面</li>
-</ul>
-<h1 id="CSS-列表"><a href="#CSS-列表" class="headerlink" title="CSS 列表"></a>CSS 列表</h1><h2 id="不同的列表项标记"><a href="#不同的列表项标记" class="headerlink" title="不同的列表项标记"></a>不同的列表项标记</h2><p>list-style-type属性指定列表项标记的类型是：</p>
-<p><code>ul.a &#123;list-style-type: circle;&#125; </code></p>
-<p><code>ul.b &#123;list-style-type: square;&#125;  </code></p>
-<p><code>ol.c &#123;list-style-type: upper-roman;&#125; </code></p>
-<p><code>ol.d &#123;list-style-type: lower-alpha;&#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513095123484.png" alt="image-20220513095123484"></p>
-<h2 id="作为列表项标记的图像"><a href="#作为列表项标记的图像" class="headerlink" title="作为列表项标记的图像"></a>作为列表项标记的图像</h2><p><code>ul &#123;    list-style-image: url(&#39;sqpurple.gif&#39;); &#125;</code></p>
-<h2 id="移除默认设置"><a href="#移除默认设置" class="headerlink" title="移除默认设置"></a>移除默认设置</h2><p>list-style-type:none 属性可以用于移除小标记。默认情况下列表 <ul> 或 <ol> 还设置了内边距和外边距，可使用 <code>margin:0</code> 和 <code>padding:0</code> 来移除:</p>
-<p><code>ul &#123;  </code></p>
-<p><code>list-style-type: none; </code></p>
-<p><code>margin: 0; </code> </p>
-<p><code>padding: 0; &#125;</code></p>
-<h1 id="CSS-表格"><a href="#CSS-表格" class="headerlink" title="CSS 表格"></a>CSS 表格</h1><h2 id="表格边框"><a href="#表格边框" class="headerlink" title="表格边框"></a>表格边框</h2><p><code>table, th, td &#123;    border: 1px solid black; &#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513095509647.png" alt="image-20220513095509647"></p>
-<h2 id="折叠边框"><a href="#折叠边框" class="headerlink" title="折叠边框"></a>折叠边框</h2><p>border-collapse 属性设置表格的边框是否被折叠成一个单一的边框或隔开</p>
-<p><code>table &#123;    border-collapse:collapse; &#125;</code></p>
-<h2 id="表格宽度和高度"><a href="#表格宽度和高度" class="headerlink" title="表格宽度和高度"></a>表格宽度和高度</h2><p>Width和height属性定义表格的宽度和高度</p>
-<h2 id="表格文字对齐"><a href="#表格文字对齐" class="headerlink" title="表格文字对齐"></a>表格文字对齐</h2><p>text-align属性设置水平对齐方式，向左，右，或中心：</p>
-<p><code>td &#123;    text-align:right; &#125;</code></p>
-<p>垂直对齐属性设置垂直对齐，比如顶部，底部或中间：</p>
-<p><code>td &#123;    height:50px;    vertical-align:bottom; &#125;</code></p>
-<h2 id="表格填充"><a href="#表格填充" class="headerlink" title="表格填充"></a>表格填充</h2><p><code>td &#123;    padding:15px; &#125;</code></p>
-<h2 id="表格颜色"><a href="#表格颜色" class="headerlink" title="表格颜色"></a>表格颜色</h2><p><code>background-color:green;//背景颜色</code></p>
-<p><code>color:white;//字体颜色</code></p>
-<h1 id="CSS-盒子模型"><a href="#CSS-盒子模型" class="headerlink" title="CSS 盒子模型"></a>CSS 盒子模型</h1><p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513100222387.png" alt="image-20220513100222387"></p>
-<ul>
-<li><strong>Margin(外边距)</strong> - 清除边框外的区域，外边距是透明的。</li>
-<li><strong>Border(边框)</strong> - 围绕在内边距和内容外的边框。</li>
-<li><strong>Padding(内边距)</strong> - 清除内容周围的区域，内边距是透明的。</li>
-<li><strong>Content(内容)</strong> - 盒子的内容，显示文本和图像。</li>
-</ul>
-<h2 id="元素的宽度和高度"><a href="#元素的宽度和高度" class="headerlink" title="元素的宽度和高度"></a>元素的宽度和高度</h2><p>当您指定一个 CSS 元素的宽度和高度属性时，你只是设置内容区域的宽度和高度。要知道，完整大小的元素，你还必须添加内边距，边框和外边距。</p>
-<p>下面的例子中的元素的总宽度为 450px：</p>
-<p><code>div &#123;    </code></p>
-<p><code>width: 300px;   </code></p>
-<p><code>border: 25px solid green;   </code> </p>
-<p><code>padding: 25px;   </code></p>
-<p><code> margin: 25px; &#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513100401274.png" alt="image-20220513100401274"></p>
-<h1 id="CSS-边框"><a href="#CSS-边框" class="headerlink" title="CSS 边框"></a>CSS 边框</h1><h2 id="CSS-边框属性"><a href="#CSS-边框属性" class="headerlink" title="CSS 边框属性"></a>CSS 边框属性</h2><p>CSS边框属性允许你指定一个元素边框的样式和颜色。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513100510011.png" alt="image-20220513100510011"></p>
-<h2 id="边框样式"><a href="#边框样式" class="headerlink" title="边框样式"></a>边框样式</h2><p> <strong>border-style</strong>属性用来定义边框的样式</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513100637119.png" alt="image-20220513100637119"></p>
-<h2 id="边框宽度"><a href="#边框宽度" class="headerlink" title="边框宽度"></a>边框宽度</h2><p>border-width 属性为边框指定宽度。</p>
-<h2 id="边框-简写属性"><a href="#边框-简写属性" class="headerlink" title="边框-简写属性"></a>边框-简写属性</h2><p>简写数据为：</p>
-<ul>
-<li>border-width</li>
-<li>border-style (required)</li>
-<li>border-color</li>
-</ul>
-<p><code>border:5px solid red;</code></p>
-<h1 id="CSS-轮廓（outline）"><a href="#CSS-轮廓（outline）" class="headerlink" title="CSS 轮廓（outline）"></a>CSS 轮廓（outline）</h1><p>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。</p>
-<p>CSS outline 属性规定元素轮廓的样式、颜色和宽度。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513100956205.png" alt="image-20220513100956205"></p>
-<h1 id="CSS-margin-外边距"><a href="#CSS-margin-外边距" class="headerlink" title="CSS margin(外边距)"></a>CSS margin(外边距)</h1><p>margin 清除周围的（外边框）元素区域。margin 没有背景颜色，是完全透明的。</p>
-<p>margin 可以单独改变元素的上，下，左，右边距，也可以一次改变所有的属性。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513101036323.png" alt="image-20220513101036323"></p>
-<p><code>margin:100px 50px;</code>//height  width</p>
-<h1 id="CSS-padding（填充）"><a href="#CSS-padding（填充）" class="headerlink" title="CSS padding（填充）"></a>CSS padding（填充）</h1><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513101202564.png" alt="image-20220513101202564"></p>
-<p><code>padding:25px 50px;//height  width</code></p>
-<h1 id="CSS分组和嵌套选择器"><a href="#CSS分组和嵌套选择器" class="headerlink" title="CSS分组和嵌套选择器"></a>CSS分组和嵌套选择器</h1><h2 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器</h2><p><code>h1 &#123;    color:green; &#125;</code></p>
-<p> <code>h2 &#123;    color:green; &#125;</code> </p>
-<p><code>p &#123;    color:green; &#125;</code></p>
-<p>为了尽量减少代码，你可以使用分组选择器。</p>
-<p><code>h1,h2,p &#123;    color:green; &#125;</code></p>
-<h2 id="嵌套选择器"><a href="#嵌套选择器" class="headerlink" title="嵌套选择器"></a>嵌套选择器</h2><ul>
-<li><strong>p{ }</strong>: 为所有 <strong>p</strong> 元素指定一个样式。</li>
-<li><strong>.marked{ }</strong>: 为所有 <strong>class=”marked”</strong> 的元素指定一个样式。</li>
-<li><strong>.marked p{ }</strong>: 为所有 <strong>class=”marked”</strong> 元素内的 <strong>p</strong> 元素指定一个样式。</li>
-<li><strong>p.marked{ }</strong>: 为所有 <strong>class=”marked”</strong> 的 <strong>p</strong> 元素指定一个样式。</li>
-</ul>
-<h1 id="CSS-属性选择器"><a href="#CSS-属性选择器" class="headerlink" title="CSS 属性选择器"></a>CSS 属性选择器</h1><p>下面的例子是把包含标题（title）的所有元素变为蓝色：</p>
-<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p><code>[title] &#123;color:blue;&#125;</code></p>
-<h2 id="属性和值选择器"><a href="#属性和值选择器" class="headerlink" title="属性和值选择器"></a>属性和值选择器</h2><p>下面的实例改变了标题title=’runoob’元素的边框样式:</p>
-<p><code>[title=runoob] &#123; border:5px solid green; &#125;</code></p>
-<h2 id="属性和值的选择器-多值"><a href="#属性和值的选择器-多值" class="headerlink" title="属性和值的选择器 - 多值"></a>属性和值的选择器 - 多值</h2><p>下面是包含指定值的title属性的元素样式的例子，使用（~）分隔属性和值:</p>
-<p>[title~=hello] { color:blue; }</p>
-<p>下面是包含指定值的lang属性的元素样式的例子，使用（|）分隔属性和值:</p>
-<p>[lang|=en] { color:blue; }</p>
-<h1 id="CSS深度选择器"><a href="#CSS深度选择器" class="headerlink" title="CSS深度选择器"></a>CSS深度选择器</h1><h2 id="在vue-element-ui时会遇到无法修改element-ui样式问题"><a href="#在vue-element-ui时会遇到无法修改element-ui样式问题" class="headerlink" title="在vue+element-ui时会遇到无法修改element-ui样式问题"></a>在vue+element-ui时会遇到无法修改element-ui样式问题</h2><p>当style设置为scoped的时，所写的样式对子组件且元素是<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%81%8D%E5%8E%86&spm=1001.2101.3001.7020">遍历</a>出来时，样式是不生效的，如果希望样式对子组件也生效，可以使用 /deep/ 深度选择器。</p>
-<h1 id="CSS-组合选择符"><a href="#CSS-组合选择符" class="headerlink" title="CSS 组合选择符"></a>CSS 组合选择符</h1><ul>
-<li>后代选择器(以空格   分隔)!!!</li>
-<li>子元素选择器(以大于 <strong>&gt;</strong> 号分隔）</li>
-<li>相邻兄弟选择器（以加号 <strong>+</strong> 分隔）</li>
-<li>普通兄弟选择器（以波浪号 <strong>～</strong> 分隔）</li>
-</ul>
-<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p><code>div p &#123; </code></p>
-<p><code> background-color:yellow;</code> </p>
-<p><code> &#125;</code></p>
-<h2 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h2><p><code>div&gt;p &#123; </code></p>
-<p><code>background-color:yellow;</code> </p>
-<p><code>&#125;</code></p>
-<h2 id="相邻兄弟选择器"><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器</h2><p>相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。</p>
-<p><code>div+p &#123; </code></p>
-<p><code> background-color:yellow;</code> </p>
-<p><code> &#125;</code></p>
-<h2 id="后续兄弟选择器"><a href="#后续兄弟选择器" class="headerlink" title="后续兄弟选择器"></a>后续兄弟选择器</h2><p>后续兄弟选择器选取所有指定元素之后的相邻兄弟元素。</p>
-<p><code>div~p &#123; </code></p>
-<p><code>background-color:yellow; </code></p>
-<p><code>&#125;</code></p>
-<h1 id="CSS-尺寸-Dimension"><a href="#CSS-尺寸-Dimension" class="headerlink" title="CSS 尺寸 (Dimension)"></a>CSS 尺寸 (Dimension)</h1><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513101504403.png" alt="image-20220513101504403"></p>
-<h1 id="CSS-Display-显示-与-Visibility（可见性）"><a href="#CSS-Display-显示-与-Visibility（可见性）" class="headerlink" title="CSS Display(显示) 与 Visibility（可见性）"></a>CSS Display(显示) 与 Visibility（可见性）</h1><p>display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏。</p>
-<p>display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏。</p>
-<p>display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。</p>
-<h2 id="块和内联元素"><a href="#块和内联元素" class="headerlink" title="块和内联元素"></a>块和内联元素</h2><p>块元素是一个元素，占用了全部宽度，在前后都是换行符。</p>
-<ul>
-<li>h1</li>
-<li>p</li>
-<li>div</li>
-</ul>
-<p>内联元素只需要必要的宽度，不强制换行</p>
-<ul>
-<li><span></li>
-<li><a></li>
-</ul>
-<h1 id="CSS-Position-定位"><a href="#CSS-Position-定位" class="headerlink" title="CSS Position(定位)"></a>CSS Position(定位)</h1><p>position 属性的五个值：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-positioning.html#position-static">static</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-positioning.html#position-relative">relative</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-positioning.html#position-fixed">fixed</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-positioning.html#position-absolute">absolute</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-positioning.html#position-sticky">sticky</a></li>
-</ul>
-<h2 id="static-定位"><a href="#static-定位" class="headerlink" title="static 定位"></a>static 定位</h2><p>HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</p>
-<p><strong>静态定位的元素不会受到 top, bottom, left, right影响。</strong></p>
-<h2 id="fixed-定位"><a href="#fixed-定位" class="headerlink" title="fixed 定位"></a>fixed 定位</h2><p>元素的位置相对于浏览器窗口是固定位置。</p>
-<p>即使窗口是滚动的它也不会移动：</p>
-<p><code>p.pos_fixed </code></p>
-<p><code>&#123;position:fixed;    </code></p>
-<p><code>top:30px;    </code></p>
-<p><code>right:5px; &#125;</code></p>
-<h2 id="relative-定位"><a href="#relative-定位" class="headerlink" title="relative 定位"></a>relative 定位</h2><p>根据其父元素进行定位，如果没有父元素，则html为父元素</p>
-<h2 id="absolute-定位"><a href="#absolute-定位" class="headerlink" title="absolute 定位"></a>absolute 定位</h2><p>根据整个的布局（全局）进行定位，不受父元素的影响。</p>
-<h2 id="sticky-定位"><a href="#sticky-定位" class="headerlink" title="sticky 定位"></a>sticky 定位</h2><p>sticky 英文字面意思是粘，粘贴，所以可以把它称之为粘性定位。</p>
-<p><strong>position: sticky;</strong> 基于用户的滚动位置来定位。</p>
-<p>粘性定位的元素是依赖于用户的滚动，在 <strong>position:relative</strong> 与 <strong>position:fixed</strong> 定位之间切换。</p>
-<p>它的行为就像 <strong>position:relative;</strong> 而当页面滚动超出目标区域时，它的表现就像 **position:fixed;**，它会固定在目标位置。</p>
-<p>元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。</p>
-<p>这个特定阈值指的是 top, right, bottom 或 left 之一，换言之，指定 top, right, bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。</p>
-<h2 id="重叠的元素"><a href="#重叠的元素" class="headerlink" title="重叠的元素"></a>重叠的元素</h2><p>z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面）</p>
-<p><code>img &#123;    position:absolute;    left:0px;    top:0px;    z-index:-1; &#125;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513105230879.png" alt="image-20220513105230879"></p>
-<h1 id="CSS-布局-Overflow"><a href="#CSS-布局-Overflow" class="headerlink" title="CSS 布局 - Overflow"></a>CSS 布局 - Overflow</h1><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513105352203.png" alt="image-20220513105352203"></p>
-<h2 id="overflow-visible"><a href="#overflow-visible" class="headerlink" title="overflow: visible"></a>overflow: visible</h2><p>默认情况下，overflow 的值为 visible， 意思是内容溢出元素框：</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513105421371.png" alt="image-20220513105421371"></p>
-<h1 id="CSS-Float-浮动"><a href="#CSS-Float-浮动" class="headerlink" title="CSS Float(浮动)"></a>CSS Float(浮动)</h1><h2 id="什么是-CSS-Float（浮动）？"><a href="#什么是-CSS-Float（浮动）？" class="headerlink" title="什么是 CSS Float（浮动）？"></a>什么是 CSS Float（浮动）？</h2><p>CSS 的 Float（浮动），会使元素向左或向右移动，其周围的元素也会重新排列。</p>
-<h2 id="清除浮动-使用-clear"><a href="#清除浮动-使用-clear" class="headerlink" title="清除浮动 - 使用 clear"></a>清除浮动 - 使用 clear</h2><p><code>clear:both;</code></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513110110631.png" alt="image-20220513110110631"></p>
-<h1 id="CSS-布局-水平-amp-垂直对齐"><a href="#CSS-布局-水平-amp-垂直对齐" class="headerlink" title="CSS 布局 - 水平 &amp; 垂直对齐"></a>CSS 布局 - 水平 &amp; 垂直对齐</h1><h2 id="元素居中对齐"><a href="#元素居中对齐" class="headerlink" title="元素居中对齐"></a>元素居中对齐</h2><p>要水平居中对齐一个元素(如 <div>), 可以使用 **margin: auto;**。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513110844787.png" alt="image-20220513110844787"></p>
-<h2 id="文本居中对齐"><a href="#文本居中对齐" class="headerlink" title="文本居中对齐"></a>文本居中对齐</h2><p>如果仅仅是为了文本在元素内居中对齐，可以使用 <strong>text-align: center;</strong></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513110858763.png" alt="image-20220513110858763"></p>
-<h2 id="图片居中对齐"><a href="#图片居中对齐" class="headerlink" title="图片居中对齐"></a>图片居中对齐</h2><p>要让图片居中对齐, 可以使用 <strong>margin: auto;</strong> 并将它放到 <strong>块</strong> 元素中:</p>
-<p><code>img &#123;    </code></p>
-<p><code>display: block;   </code></p>
-<p><code>margin: auto;  </code> }`</p>
-<h2 id="左右对齐-使用定位方式"><a href="#左右对齐-使用定位方式" class="headerlink" title="左右对齐 - 使用定位方式"></a>左右对齐 - 使用定位方式</h2><p>我们可以使用 <strong>position: absolute;</strong> 属性来对齐元素</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513111045995.png" alt="image-20220513111045995"></p>
-<p><code>position: absolute;    right: 0px;</code></p>
-<h2 id="左右对齐-使用-float-方式"><a href="#左右对齐-使用-float-方式" class="headerlink" title="左右对齐 - 使用 float 方式"></a>左右对齐 - 使用 float 方式</h2><p>我们也可以使用 <strong>float</strong> 属性来对齐元素:</p>
-<p> <code>float: right;</code></p>
-<p><em>如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出</em></p>
-<p>我们可以在父元素上添加 overflow: auto; 来解决子元素溢出的问题:<br>    overflow: auto;<br><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220513111306362.png" alt="image-20220513111306362"></p>
-<h2 id="垂直居中对齐-使用-padding"><a href="#垂直居中对齐-使用-padding" class="headerlink" title="垂直居中对齐 - 使用 padding"></a>垂直居中对齐 - 使用 padding</h2><p>如果要水平和垂直都居中，可以使用 <strong>padding</strong> 和 <strong>text-align: center</strong>:</p>
-<h2 id="垂直居中-使用-line-height"><a href="#垂直居中-使用-line-height" class="headerlink" title="垂直居中 - 使用 line-height"></a>垂直居中 - 使用 line-height</h2><p>让 line-height 属性值和 height 属性值相等来设置 div 元素居中</p>
-<h2 id="垂直居中-使用-position-和-transform"><a href="#垂直居中-使用-position-和-transform" class="headerlink" title="垂直居中 - 使用 position 和 transform"></a>垂直居中 - 使用 position 和 transform</h2><p><code>position: absolute;    top: 50%;    left: 50%;    transform: translate(-50%, -50%);</code></p>
-<p><strong>transform是根据自己的宽高</strong></p>
-<h1 id="CSS-伪类"><a href="#CSS-伪类" class="headerlink" title="CSS 伪类"></a>CSS 伪类</h1><h2 id="anchor伪类"><a href="#anchor伪类" class="headerlink" title="anchor伪类"></a>anchor伪类</h2><p><code>a:link &#123;color:#FF0000;&#125; /* 未访问的链接 */</code></p>
-<p><code>a:visited &#123;color:#00FF00;&#125; /* 已访问的链接 */</code> </p>
-<p><code>a:hover &#123;color:#FF00FF;&#125; /* 鼠标划过链接 */ </code></p>
-<p><code>a:active &#123;color:#0000FF;&#125; /* 已选中的链接 */</code></p>
-<h2 id="first-child-伪类"><a href="#first-child-伪类" class="headerlink" title="first-child 伪类"></a>first-child 伪类</h2><p>first-child 伪类来选择父元素的第一个子元素。</p>
-<p><code>p:first-child &#123;    color:blue; &#125;</code></p>
-<h1 id="CSS-伪元素"><a href="#CSS-伪元素" class="headerlink" title="CSS 伪元素"></a>CSS 伪元素</h1><h2 id="first-line-伪元素"><a href="#first-line-伪元素" class="headerlink" title=":first-line 伪元素"></a>:first-line 伪元素</h2><p>“first-line” 伪元素用于向文本的首行设置特殊样式。</p>
-<h2 id="first-letter-伪元素"><a href="#first-letter-伪元素" class="headerlink" title=":first-letter 伪元素"></a>:first-letter 伪元素</h2><p>“first-letter” 伪元素用于向文本的首字母设置特殊样式：</p>
-<h2 id="before-伪元素"><a href="#before-伪元素" class="headerlink" title=":before 伪元素"></a>:before 伪元素</h2><p>“:before” 伪元素可以在元素的内容前面插入新内容。</p>
-<h2 id="after-伪元素"><a href="#after-伪元素" class="headerlink" title=":after 伪元素"></a>:after 伪元素</h2><p>“:after” 伪元素可以在元素的内容之后插入新内容。</p>
-<h1 id="CSS-图像透明-不透明"><a href="#CSS-图像透明-不透明" class="headerlink" title="CSS 图像透明/不透明"></a>CSS 图像透明/不透明</h1><p>透明度是 <strong>opacity</strong>。</p>
-<p>例子：opacity:0.4;</p>
-<h1 id="important-规则"><a href="#important-规则" class="headerlink" title="!important 规则"></a>!important 规则</h1><p>!important 规则用于增加样式的权重。</p>
-<p><strong>!important</strong> 与优先级无关，但它与最终的结果直接相关，使用一个 !important 规则时，此声明将覆盖任何其他声明。</p>
-<h1 id="css-calc函数"><a href="#css-calc函数" class="headerlink" title="css calc函数"></a>css calc函数</h1><p>calc() 函数用于动态计算长度值。</p>
-<ul>
-<li>需要注意的是，运算符前后都需要保留一个空格，例如：<code>width: calc(100% - 10px)</code>；</li>
-<li>任何长度值都可以使用calc()函数进行计算；</li>
-<li>calc()函数支持 “+”, “-“, “*”, “/“ 运算；</li>
-<li>calc()函数使用标准的数学运算优先级规则；</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">1em</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-id">#formbox</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">100%</span> / <span class="number">6</span>);</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="CSS动画"><a href="#CSS动画" class="headerlink" title="CSS动画"></a>CSS动画</h1><h2 id="keyframes-规则"><a href="#keyframes-规则" class="headerlink" title="@keyframes 规则"></a>@keyframes 规则</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 动画代码 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> example &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;<span class="attribute">background-color</span>: yellow;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 向此元素应用动画效果 */</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">4s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_1">亲自试一试</a></p>
-<p><strong>注意：</strong><code>animation-duration</code> 属性定义需要多长时间才能完成动画。如果未指定 <code>animation-duration</code> 属性，则动画不会发生，因为默认值是 0s（0秒）。</p>
-<p>在上面的例子中，通过使用关键字 “from” 和 “to”（代表 0％（开始）和 100％（完成）），我们设置了样式何时改变。</p>
-<p>您也可以使用百分比值。通过使用百分比，您可以根据需要添加任意多个样式更改。</p>
-<p>下面的例子将在动画完成 25％，完成 50％ 以及动画完成 100％ 时更改背景颜色和 <div> 元素的位置：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 动画代码 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> example &#123;</span><br><span class="line">  <span class="number">0%</span>   &#123;<span class="attribute">background-color</span>:red; <span class="attribute">left</span>:<span class="number">0px</span>; <span class="attribute">top</span>:<span class="number">0px</span>;&#125;</span><br><span class="line">  <span class="number">25%</span>  &#123;<span class="attribute">background-color</span>:yellow; <span class="attribute">left</span>:<span class="number">200px</span>; <span class="attribute">top</span>:<span class="number">0px</span>;&#125;</span><br><span class="line">  <span class="number">50%</span>  &#123;<span class="attribute">background-color</span>:blue; <span class="attribute">left</span>:<span class="number">200px</span>; <span class="attribute">top</span>:<span class="number">200px</span>;&#125;</span><br><span class="line">  <span class="number">75%</span>  &#123;<span class="attribute">background-color</span>:green; <span class="attribute">left</span>:<span class="number">0px</span>; <span class="attribute">top</span>:<span class="number">200px</span>;&#125;</span><br><span class="line">  <span class="number">100%</span> &#123;<span class="attribute">background-color</span>:red; <span class="attribute">left</span>:<span class="number">0px</span>; <span class="attribute">top</span>:<span class="number">0px</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 应用动画的元素 */</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">4s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_2">亲自试一试</a></p>
-<h2 id="延迟动画"><a href="#延迟动画" class="headerlink" title="延迟动画"></a>延迟动画</h2><p><code>animation-delay</code> 属性规定动画开始的延迟时间。</p>
-<p>下面的例子在开始动画前有 2 秒的延迟：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">4s</span>;</span><br><span class="line">  <span class="attribute">animation-delay</span>: <span class="number">2s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_delay_1">亲自试一试</a></p>
-<p>负值也是允许的。如果使用负值，则动画将开始播放，如同已播放 N 秒。</p>
-<p>在下面的例子中，动画将开始播放，就好像它已经播放了 2 秒钟一样：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">4s</span>;</span><br><span class="line">  <span class="attribute">animation-delay</span>: -<span class="number">2s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_delay_2">亲自试一试</a></p>
-<h2 id="设置动画应运行多少次"><a href="#设置动画应运行多少次" class="headerlink" title="设置动画应运行多少次"></a>设置动画应运行多少次</h2><p><code>animation-iteration-count</code> 属性指定动画应运行的次数。</p>
-<p>下面的例子在停止前把动画运行 3 次：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">4s</span>;</span><br><span class="line">  <span class="attribute">animation-iteration-count</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_count_1">亲自试一试</a></p>
-<p>使用值 “infinite” 使动画永远持续下去：</p>
-<h2 id="反向或交替运行动画"><a href="#反向或交替运行动画" class="headerlink" title="反向或交替运行动画"></a>反向或交替运行动画</h2><p><code>animation-direction</code> 属性指定是向前播放、向后播放还是交替播放动画。</p>
-<p><code>animation-direction</code> 属性可接受以下值：</p>
-<ul>
-<li><code>normal</code> - 动画正常播放（向前）。默认值</li>
-<li><code>reverse</code> - 动画以反方向播放（向后）</li>
-<li><code>alternate</code> - 动画先向前播放，然后向后</li>
-<li><code>alternate-reverse</code> - 动画先向后播放，然后向前</li>
-</ul>
-<p>下例将以相反的方向（向后）运行动画：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">4s</span>;</span><br><span class="line">  <span class="attribute">animation-direction</span>: reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_direction_1">亲自试一试</a></p>
-<h2 id="指定动画的速度曲线"><a href="#指定动画的速度曲线" class="headerlink" title="指定动画的速度曲线"></a>指定动画的速度曲线</h2><p><code>animation-timing-function</code> 属性规定动画的速度曲线。</p>
-<p><code>animation-timing-function</code> 属性可接受以下值：</p>
-<ul>
-<li><code>ease</code> - 指定从慢速开始，然后加快，然后缓慢结束的动画（默认）</li>
-<li><code>linear</code> - 规定从开始到结束的速度相同的动画</li>
-<li><code>ease-in</code> - 规定慢速开始的动画</li>
-<li><code>ease-out</code> - 规定慢速结束的动画</li>
-<li><code>ease-in-out</code> - 指定开始和结束较慢的动画</li>
-<li><code>cubic-bezier(*n*,*n*,*n*,*n*)</code> - 运行您在三次贝塞尔函数中定义自己的值</li>
-</ul>
-<p>下面这些例子展示了可以使用的一些不同速度曲线：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;<span class="attribute">animation-timing-function</span>: linear;&#125;</span><br><span class="line"><span class="selector-id">#div2</span> &#123;<span class="attribute">animation-timing-function</span>: ease;&#125;</span><br><span class="line"><span class="selector-id">#div3</span> &#123;<span class="attribute">animation-timing-function</span>: ease-in;&#125;</span><br><span class="line"><span class="selector-id">#div4</span> &#123;<span class="attribute">animation-timing-function</span>: ease-out;&#125;</span><br><span class="line"><span class="selector-id">#div5</span> &#123;<span class="attribute">animation-timing-function</span>: ease-in-out;&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_speed">亲自试一试</a></p>
-<h2 id="指定动画的填充模式"><a href="#指定动画的填充模式" class="headerlink" title="指定动画的填充模式"></a>指定动画的填充模式</h2><p>CSS 动画不会在第一个关键帧播放之前或在最后一个关键帧播放之后影响元素。<code>animation-fill-mode</code> 属性能够覆盖这种行为。</p>
-<p>在不播放动画时（在开始之前，结束之后，或两者都结束时），<code>animation-fill-mode</code> 属性规定目标元素的样式。</p>
-<p>animation-fill-mode 属性可接受以下值：</p>
-<ul>
-<li><code>none</code> - 默认值。动画在执行之前或之后不会对元素应用任何样式。</li>
-<li><code>forwards</code> - 元素将保留由最后一个关键帧设置的样式值（依赖 animation-direction 和 animation-iteration-count）。</li>
-<li><code>backwards</code> - 元素将获取由第一个关键帧设置的样式值（取决于 animation-direction），并在动画延迟期间保留该值。</li>
-<li><code>both</code> - 动画会同时遵循向前和向后的规则，从而在两个方向上扩展动画属性。</li>
-</ul>
-<p>下面的例子让 <div> 元素在动画结束时保留来自最后一个关键帧的样式值：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">3s</span>;</span><br><span class="line">  <span class="attribute">animation-fill-mode</span>: forwards;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=css3_animation_fill-mode_1">亲自试一试</a></p>
-<h2 id="动画简写属性"><a href="#动画简写属性" class="headerlink" title="动画简写属性"></a>动画简写属性</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">animation-name</span>: example;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">5s</span>;</span><br><span class="line">  <span class="attribute">animation-timing-function</span>: linear;</span><br><span class="line">  <span class="attribute">animation-delay</span>: <span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">animation-iteration-count</span>: infinite;</span><br><span class="line">  <span class="attribute">animation-direction</span>: alternate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: example <span class="number">5s</span> linear <span class="number">2s</span> infinite alternate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="CSS-动画所有属性"><a href="#CSS-动画所有属性" class="headerlink" title="CSS 动画所有属性"></a>CSS 动画所有属性</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220614135705217.png" alt="image-20220614135705217"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/01/29/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-初识django" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1318,6 +749,158 @@
 
 
   
+    <article id="post-java基础教程8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/">java基础教程8</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/" class="archive-article-date">
+  	<time datetime="2021-03-29T06:35:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java-HashSet"><a href="#Java-HashSet" class="headerlink" title="Java HashSet"></a>Java HashSet</h2>
+        
+          <a class="article-more-a" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java基础教程7（数据结构）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B7%EF%BC%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%89/">java基础教程7（数据结构）</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B7%EF%BC%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-03-29T05:36:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java-数据结构"><a href="#Java-数据结构" class="headerlink" title="Java 数据结构"></a>Java 数据结构</h2>
+        
+          <a class="article-more-a" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B7%EF%BC%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%89/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B7%EF%BC%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
@@ -1417,11 +1000,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
