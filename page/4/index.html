@@ -161,6 +161,171 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-html学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTML-简介"><a href="#HTML-简介" class="headerlink" title="HTML 简介"></a>HTML 简介</h1><h2 id="什么是-HTML？"><a href="#什么是-HTML？" class="headerlink" title="什么是 HTML？"></a>什么是 HTML？</h2><p>HTML 是用来描述网页的一种语言。</p>
+<ul>
+<li>HTML 指的是超文本标记语言 (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage)</li>
+<li>HTML 不是一种编程语言，而是一种<em>标记语言</em> (markup language)</li>
+<li>标记语言是一套<em>标记标签</em> (markup tag)</li>
+<li>HTML 使用<em>标记标签</em>来描述网页</li>
+</ul>
+<h2 id="HTML结构图"><a href="#HTML结构图" class="headerlink" title="HTML结构图"></a>HTML结构图</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509135432898.png" alt="image-20220509135432898"></p>
+<h2 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509135709909.png" alt="image-20220509135709909"></p>
+<h2 id="HTML-元素"><a href="#HTML-元素" class="headerlink" title="HTML 元素"></a>HTML 元素</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509135723259.png" alt="image-20220509135723259"></p>
+<h2 id="lt-DOCTYPE-gt-声明"><a href="#lt-DOCTYPE-gt-声明" class="headerlink" title="&lt;!DOCTYPE&gt; 声明"></a>&lt;!DOCTYPE&gt; 声明</h2><!DOCTYPE><p>声明有助于浏览器中正确显示网页。</p>
+<p>网络上有很多不同的文件，如果能够正确声明HTML的版本，浏览器就能正确显示网页内容。</p>
+<h1 id="HTML-基础"><a href="#HTML-基础" class="headerlink" title="HTML 基础"></a>HTML 基础</h1><h2 id="HTML-标题"><a href="#HTML-标题" class="headerlink" title="HTML 标题"></a>HTML 标题</h2><p>HTML 标题（Heading）是通过<h1> - <h6> 标签来定义的</p>
+<h1>这是一个标题</h1> <h2>这是一个标题</h2> <h3>这是一个标题</h3>
+
+<h2 id="HTML-段落"><a href="#HTML-段落" class="headerlink" title="HTML 段落"></a>HTML 段落</h2><p>HTML 段落是通过标签 <p> 来定义的。</p>
+<p>这是一个段落。</p> <p>这是另外一个段落。</p>
+
+<h3 id="HTML-水平线"><a href="#HTML-水平线" class="headerlink" title="HTML 水平线"></a>HTML 水平线</h3><p>这是一个段落。</p> <hr> <p>这是一个段落。</p> <hr> <p>这是一个段落。</p>
+
+<h2 id="HTML-链接"><a href="#HTML-链接" class="headerlink" title="HTML 链接"></a>HTML 链接</h2><p>HTML 链接是通过标签 <a> 来定义的。</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com">这是一个链接</a></p>
+<h3 id="target-属性"><a href="#target-属性" class="headerlink" title="target 属性"></a>target 属性</h3><p><a> 标签的 target 属性规定在何处打开链接文档。</p>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509141539520.png" alt="image-20220509141539520"></p>
+<h2 id="HTML-图像"><a href="#HTML-图像" class="headerlink" title="HTML 图像"></a>HTML 图像</h2><h3 id="源属性（Src）"><a href="#源属性（Src）" class="headerlink" title="源属性（Src）"></a>源属性（Src）</h3><p>src 指 “source”。源属性的值是图像的 URL 地址。</p>
+<h3 id="Alt属性"><a href="#Alt属性" class="headerlink" title="Alt属性"></a>Alt属性</h3><p>alt 属性用来为图像定义一串预备的可替换的文本。</p>
+<p>替换文本属性的值是用户定义的。</p>
+<img src="boat.gif" alt="Big Boat">
+
+<p>在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。</p>
+<h3 id="设置图像的高度与宽度"><a href="#设置图像的高度与宽度" class="headerlink" title="设置图像的高度与宽度"></a>设置图像的高度与宽度</h3><img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228">
+
+<h2 id="HTML-属性"><a href="#HTML-属性" class="headerlink" title="HTML 属性"></a>HTML 属性</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509140325279.png" alt="image-20220509140325279"></p>
+<h2 id="HTML-注释"><a href="#HTML-注释" class="headerlink" title="HTML 注释"></a>HTML 注释</h2><!-- 这是一个注释 -->
+
+<h2 id="HTML-折行"><a href="#HTML-折行" class="headerlink" title="HTML 折行"></a>HTML 折行</h2><p>如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 <strong><br></strong></p>
+<p>这个<br>段落<br>演示了分行的效果</p>
+
+<h2 id="HTML-文本格式化标签"><a href="#HTML-文本格式化标签" class="headerlink" title="HTML 文本格式化标签"></a>HTML 文本格式化标签</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220509141106659.png" alt="image-20220509141106659"></p>
+<h1 id="HTML-样式-CSS"><a href="#HTML-样式-CSS" class="headerlink" title="HTML 样式- CSS"></a>HTML 样式- CSS</h1><p>CSS 可以通过以下方式添加到HTML中:</p>
+<ul>
+<li>内联样式- 在HTML元素中使用”style” <strong>属性</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color:blue;margin-left:20px;&quot;</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>内部样式表 -在HTML文档头部 <head> 区域使用<style> <strong>元素</strong> 来包含CSS</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">body</span> &#123;<span class="attribute">background-color</span>:yellow;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:blue;&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>外部引用 - 使用外部 CSS <strong>文件</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="HTML-表格"><a href="#HTML-表格" class="headerlink" title="HTML 表格"></a>HTML 表格</h1><table border="1">     
+    <tr>        
+    <td>row 1, cell 1</td>        
+    <td>row 1, cell 2</td>     
+    </tr>     
+    <tr>         
+        <td>row 2, cell 1</td>         
+        <td>row 2, cell 2</td>     
+    </tr> 
+</table>
+
+<h2 id="HTML-表格表头"><a href="#HTML-表格表头" class="headerlink" title="HTML 表格表头"></a>HTML 表格表头</h2><table border="1">    
+    <tr>         
+        <th>Header 1</th>         
+        <th>Header 2</th>    
+    </tr>     
+    <tr>        
+        <td>row 1, cell 1</td>        
+        <td>row 1, cell 2</td>     
+    </tr>     
+    <tr>         
+        <td>row 2, cell 1</td>        
+        <td>row 2, cell 2</td>     
+    </tr> 
+</table>
+
+<h1 id="HTML-列表"><a href="#HTML-列表" class="headerlink" title="HTML 列表"></a>HTML 列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
+<li>Coffee</li>
+<li>Milk</li>
+</ul>
+
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
+<li>Coffee</li>
+<li>Milk</li>
+</ol>
+
+<h2 id="HTML-自定义列表"><a href="#HTML-自定义列表" class="headerlink" title="HTML 自定义列表"></a>HTML 自定义列表</h2><p>自定义列表不仅仅是一列项目，而是项目及其注释的组合。</p>
+<p>自定义列表以 <dl> 标签开始。每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 <dd> 开始。</p>
+<dl>
+<dt>Coffee</dt>
+<dd>- black hot drink</dd>
+<dd>- white  hot drink</dd>
+<dt>Milk</dt>
+<dd>- white cold drink</dd>
+<dd>- black cold drink</dd>
+</dl>
+
+<h1 id="HTML-div和span"><a href="#HTML-div和span" class="headerlink" title="HTML div和span"></a>HTML div和span</h1><h2 id="HTML-区块元素"><a href="#HTML-区块元素" class="headerlink" title="HTML 区块元素"></a>HTML 区块元素</h2><p>块级元素在浏览器显示时，通常会以新行来开始（和结束）。</p>
+<p>实例: <h1>, <p>, <ul>, <table></p>
+<h2 id="HTML-内联元素"><a href="#HTML-内联元素" class="headerlink" title="HTML 内联元素"></a>HTML 内联元素</h2><p> <b>, <td>, <a>, <img></p>
+<h2 id="HTML-div元素"><a href="#HTML-div元素" class="headerlink" title="HTML div元素"></a>HTML div元素</h2><p>HTML <div> 元素是块级元素，它可用于组合其他 HTML 元素的容器</p>
+<h2 id="HTML-span元素"><a href="#HTML-span元素" class="headerlink" title="HTML span元素"></a>HTML span元素</h2><p>HTML <span> 元素是内联元素，可用作文本的容器</p>
+<h1 id="HTML-表单"><a href="#HTML-表单" class="headerlink" title="HTML 表单"></a>HTML 表单</h1><h2 id="HTML-表单-输入元素"><a href="#HTML-表单-输入元素" class="headerlink" title="HTML 表单 - 输入元素"></a>HTML 表单 - 输入元素</h2><p>输入标签 <strong><input></strong>,输入类型是由 <strong>type</strong> 属性定义</p>
+<h3 id="文本域（Text-Fields）"><a href="#文本域（Text-Fields）" class="headerlink" title="文本域（Text Fields）"></a>文本域（Text Fields）</h3><p>&lt;**form**&gt;<br>First name: &lt;**input** type=”text” name=”firstname”&gt;&lt;**br**&gt;<br>Last name: &lt;**input** type=”text” name=”lastname”&gt;<br>&lt;/**form**&gt;</p>
+<h3 id="密码字段"><a href="#密码字段" class="headerlink" title="密码字段"></a>密码字段</h3><p>&lt;**form**&gt;<br>Password: &lt;**input** type=”password” name=”pwd”&gt;<br>&lt;/**form**&gt;</p>
+<h3 id="单选按钮（Radio-Buttons）"><a href="#单选按钮（Radio-Buttons）" class="headerlink" title="单选按钮（Radio Buttons）"></a>单选按钮（Radio Buttons）</h3><p>&lt;**form** action=””&gt;<br>&lt;**input** type=”radio” name=”sex” value=”male”&gt;男&lt;**br**&gt;<br>&lt;**input** type=”radio” name=”sex” value=”female”&gt;女<br>&lt;/**form**&gt;</p>
+<h3 id="复选框（Checkboxes）"><a href="#复选框（Checkboxes）" class="headerlink" title="复选框（Checkboxes）"></a>复选框（Checkboxes）</h3><p>&lt;**form**&gt;<br>&lt;**input** type=”checkbox” name=”vehicle” value=”Bike”&gt;我喜欢自行车&lt;**br**&gt;<br>&lt;**input** type=”checkbox” name=”vehicle” value=”Car”&gt;我喜欢小汽车<br>&lt;/**form**&gt;</p>
+<h3 id="提交按钮-Submit"><a href="#提交按钮-Submit" class="headerlink" title="提交按钮(Submit)"></a>提交按钮(Submit)</h3><p>&lt;**form** name=”input” action=”html_form_action.php” method=”get”&gt;<br>Username: &lt;**input** type=”text” name=”user”&gt;<br>&lt;**input** type=”submit” value=”Submit”&gt;<br>&lt;/**form**&gt;</p>
+<h1 id="IFrame"><a href="#IFrame" class="headerlink" title="IFrame"></a><del>IFrame</del></h1><h1 id="HTML-颜色"><a href="#HTML-颜色" class="headerlink" title="HTML 颜色"></a>HTML 颜色</h1><p>HTML 颜色由红色、绿色、蓝色混合而成。</p>
+<h1 id="HTML-脚本"><a href="#HTML-脚本" class="headerlink" title="HTML 脚本"></a>HTML 脚本</h1><h2 id="script-标签"><a href="#script-标签" class="headerlink" title="script 标签"></a>script 标签</h2><script> document.write("Hello World!"); </script>
+
+<h2 id="noscript-标签"><a href="#noscript-标签" class="headerlink" title="noscript 标签"></a>noscript 标签</h2><p><noscript> 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时。</p>
+<h1 id="HTML-字符实体"><a href="#HTML-字符实体" class="headerlink" title="HTML 字符实体"></a>HTML 字符实体</h1><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220512155710929.png" alt="image-20220512155710929"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/01/29/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1153,82 +1318,6 @@
 
 
   
-    <article id="post-java基础教程8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/">java基础教程8</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/" class="archive-article-date">
-  	<time datetime="2021-03-29T06:35:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java-HashSet"><a href="#Java-HashSet" class="headerlink" title="Java HashSet"></a>Java HashSet</h2>
-        
-          <a class="article-more-a" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/29/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
@@ -1328,11 +1417,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1345,10 +1434,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">SQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">TypeScript   基础   重点</a>
               </li>
             
             <div class="clearfix"></div>
