@@ -179,75 +179,13 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="1，约束"><a href="#1，约束" class="headerlink" title="1，约束"></a>1，约束</h2><img src="assets/image-20210724104749122.png" alt="image-20210724104749122" style="zoom:70%;" />
+<h2 id="1，约束"><a href="#1，约束" class="headerlink" title="1，约束"></a>1，约束</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;assets&#x2F;image-20210724104749122.png&quot; alt&#x3D;&quot;image-20210724104749122&quot; style&#x3D;&quot;zoom:70%;&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">上面表中可以看到表中数据存在一些问题：</span><br><span class="line"></span><br><span class="line">* id 列一般是用标示数据的唯一性的，而上述表中的id为1的有三条数据，并且 &#96;马花疼&#96; 没有id进行标示</span><br><span class="line">* &#96;柳白&#96; 这条数据的age列的数据是3000，而人也不可能活到3000岁</span><br><span class="line">* &#96;马运&#96;  这条数据的math数学成绩是-5，而数学学得再不好也不可能出现负分</span><br><span class="line"></span><br><span class="line">* &#96;柳青&#96; 这条数据的english列（英文成绩）值为null，而成绩即使没考也得是0分</span><br><span class="line"></span><br><span class="line">针对上述数据问题，我们就可以从数据库层面在添加数据的时候进行限制，这个就是约束。</span><br><span class="line"></span><br><span class="line">### 1.1  概念</span><br><span class="line"></span><br><span class="line">* 约束是作用于表中列上的规则，用于限制加入表的数据</span><br><span class="line"></span><br><span class="line">  例如：我们可以给id列加约束，让其值不能重复，不能为null值。</span><br><span class="line"></span><br><span class="line">* 约束的存在保证了数据库中数据的正确性、有效性和完整性</span><br><span class="line"></span><br><span class="line">  添加约束可以在添加数据的时候就限制不正确的数据，年龄是3000，数学成绩是-5分这样无效的数据，继而保障数据的完整性。</span><br><span class="line"></span><br><span class="line">### 1.2  分类</span><br><span class="line"></span><br><span class="line">*  **非空约束： 关键字是 NOT NULL**</span><br><span class="line"></span><br><span class="line">  保证列中所有的数据不能有null值。</span><br><span class="line"></span><br><span class="line">  例如：id列在添加 &#96;马花疼&#96; 这条数据时就不能添加成功。</span><br><span class="line"></span><br><span class="line">* **唯一约束：关键字是  UNIQUE**</span><br><span class="line"></span><br><span class="line">  保证列中所有数据各不相同。</span><br><span class="line"></span><br><span class="line">  例如：id列中三条数据的值都是1，这样的数据在添加时是绝对不允许的。</span><br><span class="line"></span><br><span class="line">*  **主键约束： 关键字是  PRIMARY KEY**</span><br><span class="line"></span><br><span class="line">  主键是一行数据的唯一标识，要求非空且唯一。一般我们都会给没张表添加一个主键列用来唯一标识数据。</span><br><span class="line"></span><br><span class="line">  例如：上图表中id就可以作为主键，来标识每条数据。那么这样就要求数据中id的值不能重复，不能为null值。</span><br><span class="line"></span><br><span class="line">* **检查约束： 关键字是  CHECK** </span><br><span class="line"></span><br><span class="line">  保证列中的值满足某一条件。</span><br><span class="line"></span><br><span class="line">  例如：我们可以给age列添加一个范围，最低年龄可以设置为1，最大年龄就可以设置为300，这样的数据才更合理些。</span><br><span class="line"></span><br><span class="line">  &gt; 注意：MySQL不支持检查约束。</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; 这样是不是就没办法保证年龄在指定的范围内了？从数据库层面不能保证，以后可以在java代码中进行限制，一样也可以实现要求。</span><br><span class="line"></span><br><span class="line">* **默认约束： 关键字是   DEFAULT**</span><br><span class="line"></span><br><span class="line">  保存数据时，未指定值则采用默认值。</span><br><span class="line"></span><br><span class="line">  例如：我们在给english列添加该约束，指定默认值是0，这样在添加数据时没有指定具体值时就会采用默认给定的0。</span><br><span class="line"></span><br><span class="line">* **外键约束： 关键字是  FOREIGN KEY**</span><br><span class="line"></span><br><span class="line">  外键用来让两个表的数据之间建立链接，保证数据的一致性和完整性。</span><br><span class="line"></span><br><span class="line">  外键约束现在可能还不太好理解，后面我们会重点进行讲解。</span><br><span class="line"></span><br><span class="line">### 1.3  非空约束</span><br><span class="line"></span><br><span class="line">* 概念</span><br><span class="line"></span><br><span class="line">  非空约束用于保证列中所有数据不能有NULL值</span><br><span class="line"></span><br><span class="line">* 语法</span><br><span class="line"></span><br><span class="line">  * 添加约束</span><br><span class="line"></span><br><span class="line">    &#96;&#96;&#96;sql</span><br><span class="line">    -- 创建表时添加非空约束</span><br><span class="line">    CREATE TABLE 表名(</span><br><span class="line">       列名 数据类型 NOT NULL,</span><br><span class="line">       …</span><br><span class="line">    ); </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
 
-<p>上面表中可以看到表中数据存在一些问题：</p>
+<pre><code><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加非空约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 数据类型 <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure>
+</code></pre>
 <ul>
-<li><p>id 列一般是用标示数据的唯一性的，而上述表中的id为1的有三条数据，并且 <code>马花疼</code> 没有id进行标示</p>
-</li>
-<li><p><code>柳白</code> 这条数据的age列的数据是3000，而人也不可能活到3000岁</p>
-</li>
-<li><p><code>马运</code>  这条数据的math数学成绩是-5，而数学学得再不好也不可能出现负分</p>
-</li>
-<li><p><code>柳青</code> 这条数据的english列（英文成绩）值为null，而成绩即使没考也得是0分</p>
-</li>
-</ul>
-<p>针对上述数据问题，我们就可以从数据库层面在添加数据的时候进行限制，这个就是约束。</p>
-<h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1  概念"></a>1.1  概念</h3><ul>
-<li><p>约束是作用于表中列上的规则，用于限制加入表的数据</p>
-<p>例如：我们可以给id列加约束，让其值不能重复，不能为null值。</p>
-</li>
-<li><p>约束的存在保证了数据库中数据的正确性、有效性和完整性</p>
-<p>添加约束可以在添加数据的时候就限制不正确的数据，年龄是3000，数学成绩是-5分这样无效的数据，继而保障数据的完整性。</p>
-</li>
-</ul>
-<h3 id="1-2-分类"><a href="#1-2-分类" class="headerlink" title="1.2  分类"></a>1.2  分类</h3><ul>
-<li> <strong>非空约束： 关键字是 NOT NULL</strong></li>
-</ul>
-<p>  保证列中所有的数据不能有null值。</p>
-<p>  例如：id列在添加 <code>马花疼</code> 这条数据时就不能添加成功。</p>
-<ul>
-<li><p><strong>唯一约束：关键字是  UNIQUE</strong></p>
-<p>保证列中所有数据各不相同。</p>
-<p>例如：id列中三条数据的值都是1，这样的数据在添加时是绝对不允许的。</p>
-</li>
-<li><p> <strong>主键约束： 关键字是  PRIMARY KEY</strong></p>
-</li>
-</ul>
-<p>  主键是一行数据的唯一标识，要求非空且唯一。一般我们都会给没张表添加一个主键列用来唯一标识数据。</p>
-<p>  例如：上图表中id就可以作为主键，来标识每条数据。那么这样就要求数据中id的值不能重复，不能为null值。</p>
-<ul>
-<li><p><strong>检查约束： 关键字是  CHECK</strong> </p>
-<p>保证列中的值满足某一条件。</p>
-<p>例如：我们可以给age列添加一个范围，最低年龄可以设置为1，最大年龄就可以设置为300，这样的数据才更合理些。</p>
-<blockquote>
-<p>注意：MySQL不支持检查约束。</p>
-<p>这样是不是就没办法保证年龄在指定的范围内了？从数据库层面不能保证，以后可以在java代码中进行限制，一样也可以实现要求。</p>
-</blockquote>
-</li>
-<li><p><strong>默认约束： 关键字是   DEFAULT</strong></p>
-<p>保存数据时，未指定值则采用默认值。</p>
-<p>例如：我们在给english列添加该约束，指定默认值是0，这样在添加数据时没有指定具体值时就会采用默认给定的0。</p>
-</li>
-<li><p><strong>外键约束： 关键字是  FOREIGN KEY</strong></p>
-<p>外键用来让两个表的数据之间建立链接，保证数据的一致性和完整性。</p>
-<p>外键约束现在可能还不太好理解，后面我们会重点进行讲解。</p>
-</li>
-</ul>
-<h3 id="1-3-非空约束"><a href="#1-3-非空约束" class="headerlink" title="1.3  非空约束"></a>1.3  非空约束</h3><ul>
-<li><p>概念</p>
-<p>非空约束用于保证列中所有数据不能有NULL值</p>
-</li>
-<li><p>语法</p>
-<ul>
-<li><p>添加约束</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建表时添加非空约束</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型 <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">   …</span><br><span class="line">); </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加非空约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 数据类型 <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure></li>
 <li><p>删除约束</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 数据类型;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
 </ul>
 <h3 id="1-4-唯一约束"><a href="#1-4-唯一约束" class="headerlink" title="1.4  唯一约束"></a>1.4  唯一约束</h3><ul>
 <li><p>概念</p>
@@ -751,6 +689,8 @@
 <p>查询到的结果是1 则表示自动提交，结果是0表示手动提交。当然也可以通过下面语句修改提交方式</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="variable">@autocommit</span> <span class="operator">=</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<pre><code>
+</code></pre>
 
       
 
@@ -1924,11 +1864,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言   基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
